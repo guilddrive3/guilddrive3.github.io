@@ -1,5 +1,10 @@
 "use strict";
 
+/* You need the module.exports when testing in node.  Comment it out when you send your file to the browser 
+*/
+module.exports = { pow }; //comma separated list of functions or objects to export
+
+
 /**
  * 
  * @param {Number} num is any number
