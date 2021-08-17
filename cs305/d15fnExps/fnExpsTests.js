@@ -6,11 +6,12 @@ Comment these out when you send it to the browser with the index.html mocha setu
 const assert = require("assert");  //always need this with node
 const imports = require("./fnExps.js");  //with node need the name of your file with your functions here
 const double = imports.double;  //do this for all of the functions used in the Mocha tests
-const multiply = imports.multiply;
-const sum = imports.sum;
+const myMap = imports.myMap;
+const times100 = imports.times100;
 
 
-/* global assert maxOfThree sum multiply findLongestWord reverseArray reverseArrayInPlace scoreExams */
+/* the following comment is needed when you run in the browser environment */
+/* global assert double times100 myMap  */
 
 /* 1.	1.	Write a function, double, that takes a number and returns 2 times the number..  */
 describe("double", function () {
@@ -42,7 +43,7 @@ describe("times100", function () {
     describe("myMap", function () {
         const testArray = [-10, 0, 10, 20];
         it("tests myMap on double", function () {
-            assert.deepStrictEqual(myMap(testArray, double), [-20, 0, 20, 40]);
+            assert.deepStrictEqual(myMap(testArray, times100), [-20, 0, 20, 40]);
         });
         it("tests myMap on times100", function () {
             assert.deepStrictEqual(myMap(testArray, times100), [-1000, 0, 1000, 2000]);
