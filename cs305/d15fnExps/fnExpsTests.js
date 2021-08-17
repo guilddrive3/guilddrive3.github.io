@@ -43,7 +43,7 @@ describe("times100", function () {
     describe("myMap", function () {
         const testArray = [-10, 0, 10, 20];
         it("tests myMap on double", function () {
-            assert.deepStrictEqual(myMap(testArray, times100), [-20, 0, 20, 40]);
+            assert.deepStrictEqual(myMap(testArray, double), [-20, 0, 20, 40]);
         });
         it("tests myMap on times100", function () {
             assert.deepStrictEqual(myMap(testArray, times100), [-1000, 0, 1000, 2000]);
