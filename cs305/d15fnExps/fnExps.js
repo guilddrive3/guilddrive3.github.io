@@ -5,9 +5,12 @@
 module.exports = {double, times100, myMap }; //add all of your function names here that you need for the node mocha tests
 
 /**
- * @returns {void} 
+ * @param {number} num is any number
+ * @returns {number} double the input
  */
-function double(){}
+function double(num){
+    return 2 * num;
+}
 
 
 /**

@@ -19,23 +19,23 @@ describe("double", function () {
         assert.strictEqual(double(10), 20);
     });
     it("tests double 0", function () {
-        assert.strictEqual(double(10), 0);
+        assert.strictEqual(double(0), 0);
     });
     it("tests double -10", function () {
-        assert.strictEqual(double(10), -20);
+        assert.strictEqual(double(-10), -20);
     });
 });
 
 /*  2.	Write a function times100 that takes a number and returns 100 times the number. */
 describe("times100", function () {
     it("tests times100 10", function () {
-        assert.strictEqual(double(10), 1000);
+        assert.strictEqual(times100(10), 1000);
     });
     it("tests times100 0", function () {
-        assert.strictEqual(double(10), 0);
+        assert.strictEqual(times100(0), 0);
     });
     it("tests times100 -10", function () {
-        assert.strictEqual(double(10), -1000);
+        assert.strictEqual(times100(-10), -1000);
     });
 });
 
