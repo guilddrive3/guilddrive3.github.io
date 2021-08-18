@@ -10,7 +10,7 @@ const multiply = myExports.multiply;
 const sum = myExports.sum;
 
 
-/* global assert maxOfThree sum multiply findLongestWord reverseArray reverseArrayInPlace scoreExams */
+/* global assert maxOfThree sum multiply findLongestWord reverseArray reverseArrayInPlace scoreExams generateArray */
 
 /* 1.	1.	Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.  */
 describe("maxOfThree", function () {
@@ -66,7 +66,9 @@ describe("findLongestWord", function () {
 
 /*
 4.	Reverse an Array 
-Arrays have a reverse method that changes the array by inverting the order in which its elements appear. For this exercise, write two functions, reverseArray and reverseArrayInPlace. The first, reverseArray, takes an array as argument and produces a new array that has the same elements in the inverse order. The second, reverseArrayInPlace, does what the reverse method does: it modifies the array given as argument by reversing its elements. Neither may use the standard reverse method. 
+Arrays have a reverse method that changes the array by inverting the order in which its elements appear. For this exercise, write two functions, reverseArray and 
+reverseArrayInPlace. The first, reverseArray, takes an array as argument and produces a new array that has the same elements in the inverse order. The second, 
+reverseArrayInPlace, does what the reverse method does: it modifies the array given as argument by reversing its elements. Neither may use the standard reverse method. 
 */
 describe("reverseArray", function () {
     it("tests reverseArray odd number elements", function () {
@@ -92,14 +94,27 @@ const studentAnswers = [[1, 1, 2], [2, 1, 2], [3, 1, 3]];
 const correctAnswers = [3, 1, 2];
 scoreExams(studentAnswers, correctAnswers)); --> [2, 2, 2]
 */
-/*
-4.	Reverse an Array 
-Arrays have a reverse method that changes the array by inverting the order in which its elements appear. For this exercise, write two functions, reverseArray and reverseArrayInPlace. The first, reverseArray, takes an array as argument and produces a new array that has the same elements in the inverse order. The second, reverseArrayInPlace, does what the reverse method does: it modifies the array given as argument by reversing its elements. Neither may use the standard reverse method. 
-*/
+
 describe("score exam", function () {
     const studentAnswers = [[1, 1, 2,4], [2, 1, 2,2], [3, 1, 3,4]];
     const correctAnswers = [3, 1, 2,4];
     it("exam with 3 students", function () {
         assert.deepEqual(scoreExams(studentAnswers, correctAnswers), [3,2,3]);
+    });
+});
+
+/* 6. Write a function that takes two integers as inputs and returns a 2-dimensional array containing sequential numbers across each row as follows: */
+describe("generate array", function () {
+    const expected33 = [ [1, 2, 3], [4, 5, 6], [7, 8, 9]];
+    const expected23 = [ [1, 2, 3], [4, 5, 6]];
+    const expected21 = [ [1], [2]];
+    it("expected33", function () {
+        assert.deepEqual(generateArray(3,3), expected33);
+    });
+    it("expected23", function () {
+        assert.deepEqual(generateArray(2,3), expected23);
+    });
+    it("expected21", function () {
+        assert.deepEqual(generateArray(2, 1), expected21);
     });
 });
