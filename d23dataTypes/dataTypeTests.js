@@ -22,15 +22,15 @@ describe("ucFirst", function() {
 
 describe("checkSpam", function() {
   it('finds spam in "buy ViAgRA now"', function() {
-    assert.isTrue(checkSpam('buy ViAgRA now'));
+    assert.strictEqual(checkSpam('buy ViAgRA now'), true);
   });
 
   it('finds spam in "free xxxxx"', function() {
-    assert.isTrue(checkSpam('free xxxxx'));
+    assert.strictEqual(checkSpam('free xxxxx'), true);
   });
 
   it('no spam in "innocent rabbit"', function() {
-    assert.isFalse(checkSpam('innocent rabbit'));
+    assert.strictEqual(checkSpam('innocent rabbit'), false);
   });
 });
 
