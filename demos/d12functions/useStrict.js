@@ -1,7 +1,7 @@
 "use strict";
 /* eslint-disable */
 
-const msg = 'hello';
+const msg = 'hello';
 console.log(msg);
-mgs = 'goodbye';
+mgs= 'goodbye';
 console.log (msg);
