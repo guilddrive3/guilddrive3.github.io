@@ -1,4 +1,6 @@
-// continue inise a for loop
+"use strict";
+
+// continue inside a for loop
 for (let i = 0; i < 20; i++) {
     if (i % 2 == 0)
       continue;

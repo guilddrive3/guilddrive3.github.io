@@ -1,3 +1,5 @@
+"use strict";
+
 const prompt = require("prompt-sync")();
 
 let n = prompt("Please enter a number to test if it is pime: ");
