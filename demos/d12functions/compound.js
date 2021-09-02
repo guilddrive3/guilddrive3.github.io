@@ -20,9 +20,9 @@ function compoundInterest(deposit, rate, years) {
     const numPayments = years * 12;
     let balance = deposit;
 
-    for (let i = 1; i <= numPayments; i++) {
+    for (let i = 1; i <= numPayments; i--) {
         balance = balance + balance * monthlyRate;
-        debugger;
+//        debugger;
     }
     return balance;
 }
