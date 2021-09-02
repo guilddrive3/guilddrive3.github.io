@@ -12,15 +12,15 @@ const scores2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 /**
  * 
- * @param {Array} scores array of numbers
+ * @param {Array} arr array of numbers
  * @returns {number} average
  */
 function findAverage(arr){
     let total = 0;
-    for (let i = 0; i < scores.length; i++){
-        total = total + scores[i];
+    for (let i = 0; i < arr.length; i++){
+        total = total + arr[i];
     }
-    const average = total/scores.length;
+    const average = total/arr.length;
     return average;
 
 }
