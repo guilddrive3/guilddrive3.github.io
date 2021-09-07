@@ -15,8 +15,7 @@ const Manager = {
    * @returns {undefined} 
    */
   function sayHi() {
-     const name = this.name;
-     console.log("My name is: ", name);
+     //IMPLEMENT THIS
   }
   
   // add sayHi function to both objects

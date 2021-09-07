@@ -9,8 +9,8 @@ const calculator = myExports.calculator;  //do this for all of the functions use
 
 
 
-describe("new calculator", function () {
- 
+describe("test calculator with values 2, 3", function () {
+    calculator.setValues(2, 3);  //values for the tests
 
     it("checks initial values 2 and 3", function () {
         assert.strictEqual(calculator.a, 2);
