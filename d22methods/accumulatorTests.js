@@ -11,7 +11,7 @@ describe("calculator from constructor function", function () {
     let calc;  
     before(function () {
         calc = new Calculator();
-        calc.setValues(2, 3);
+        calc.setValues(20, 30);
     });
 
     it("when 20 and 30 are entered, the sum is 50", function () {
