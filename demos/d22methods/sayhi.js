@@ -16,6 +16,9 @@ const Manager = {
    */
   function sayHi() {
      //IMPLEMENT THIS
+     let reply ="Hello, my name is "+ this.name + "I am " + this.age;
+     console.log(reply);
+     return reply;
   }
   
   // add sayHi function to both objects
