@@ -29,15 +29,27 @@ bank.saveTransaction = function (id, amount) {
 
 bank.debit = function (id, amount) {
     /* make sure current balance is > amount */
-//IMPLEMENT THIS
+    const targetCust = this.transactionsDB.find(customer => customer.customerId === id);
+    if (this.getBalance(targetCust.customerId) > amount) {
+        targetCust.customerTransactions.push(-amount);
+    }
 };
 
 bank.credit = function (id, amount) {
+    // const balance = this.getBalance(id);
+    // balance += amount;
     this.saveTransaction(id, amount);
 };
 
 bank.getBalance = function (id) {
-//IMPLEMENT THIS
+    //IMPLEMENT THIS
+    const transactions = this.transactionsDB;
+    // for (const customer of transactions){
+
+    // }
+    const targetCust = transactions.find(customer => customer.customerId === id);
+    const balance = sumArray(targetCust.customerTransactions);
+    return balance;
 };
 
 
@@ -46,11 +58,33 @@ bank.getBalance = function (id) {
  * @returns {number}  returns sum of all balances
  */
 bank.bankBalance = function () {
-//IMPLEMENT THIS
+    const transactions = this.transactionsDB;
+    let totalBalance = 0;
+    for (const aCustomer of transactions) {
+        const custTransactions = aCustomer.customerTransactions;
+        totalBalance += sumArray(custTransactions);
+    }
+    return totalBalance;
 };
 
+/**
+ * 
+ * @param {Array} arr of numbers
+ * @returns {number} sum
+ */
+function sumArray(arr) {
+    let total = 0;
+    for (const num of arr) {
+        total += num;
+    }
+    return total;
+}
 
+// console.log("total balance should be 85: ", bank.bankBalance());
+// bank.credit(1, 20);
+// bank.debit(1, 1000);
+// console.log("total should now be 105: ", bank.bankBalance());
 
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
 /* must be at end of file if are exporting an object so the export is after the definition */
-module.exports = {bank }; //add all of your object names here that you need for the node mocha tests
+module.exports = { bank }; //add all of your object names here that you need for the node mocha tests
