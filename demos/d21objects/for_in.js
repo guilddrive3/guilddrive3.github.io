@@ -19,3 +19,5 @@ function getProperties(obj){
 }
 
 console.log("expect [s100, s102, s103 ] : " , getProperties(gradeReport));
+
+console.log("expect [s100, s102, s103 ] : " , Object.keys(gradeReport));
