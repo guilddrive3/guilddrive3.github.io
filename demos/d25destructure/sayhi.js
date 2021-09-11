@@ -7,6 +7,7 @@ function sayHi() {
     console.log( "Hello" );
    }
    const myHi = sayHi();
+   console.log(myHi);
    console.log( sayHi() ); // shows the function code
 
    /**
