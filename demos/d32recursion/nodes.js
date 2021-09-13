@@ -58,3 +58,24 @@ let node4 = {
     }
 
     console.log("expect [body, div, label, input, p] :", collectNames(node1));
+
+        /**
+     * collectNames no accum parameter
+     * @param {Object} node is a node
+     * @param {Array} accum is a list of node names
+     * @returns {Array} list of node names
+     */
+         function collectNames2(node, accum){
+            if (node.children === null) {
+                return node.name;
+            } else {
+                let accum = [];
+                accum.push(node.name);
+                for (const childNode of node.children){
+                    accum = accum.concat(collectNames2(childNode, []));
+                }
+                return accum;            
+            }
+        }
+    
+        console.log("collectNames2 expect [body, div, label, input, p] :", collectNames2(node1));
