@@ -31,4 +31,4 @@ function countInstances(str, letter){
     }
 }
 
-console.log("expect 2", countInstances("abcda", "a"));
+console.log("expect 2", countInstances("abca", "a"));
