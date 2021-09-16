@@ -3,7 +3,7 @@
 /* global exports */
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser 
 */
-module.exports = { sumTo, factorial, fibonacci, outputList, outputListLoop, reverseList, reverseListLoop}; //add all of your function names here that you need for the node mocha tests
+module.exports = { sumTo, factorial, fibonacci, outputList, outputListLoop, reverseList, reverseListLoop }; //add all of your function names here that you need for the node mocha tests
 //module.exports = { outputList };
 
 /**
@@ -11,26 +11,33 @@ module.exports = { sumTo, factorial, fibonacci, outputList, outputListLoop, reve
  * @param {Object} node is a node for a linked list
  * @returns {string}  just to make the test pass and assert the console.logs are working
  */
- function outputListV2(node){
+function outputListV2(node) {
     console.log(node.value);
-     if (node.next === null) {
-        return "1 2 3 4 printed to console";
-     } else {
-         return outputList(node.next);
-     }
- }
+    if (node.next === null) {
+        //return "1 2 3 4 printed to console";
+    } else {
+        // return outputList(node.next);
+        outputList(node.next);
+    }
+}
 
 /* original version, refactored above */
-//  function outputList(node){
-//     if (node.next === null) {
-//        console.log(node.value);
-//      } else {
-//        console.log(node.value);
-//        outputList(node.next);
-//      }
-//      return "1 2 3 4 printed to console";
-//   }
-  
+
+/**
+ * 
+ * @param {Object} node is a node for a linked list
+ * @returns {string}  just to make the test pass and assert the console.logs are working
+ */
+function outputListV1(node) {
+    if (node.next === null) {
+        console.log(node.value);
+    } else {
+        console.log(node.value);
+        outputList(node.next);
+    }
+    return "1 2 3 4 printed to console";
+}
+
 /* from Barnabus */
 "use strict";
 
@@ -71,9 +78,9 @@ function factorial(num) {
  * @returns {number} the factorial of the input.
  */
 function fibonacci(num) {
-    if (num === 0){
+    if (num === 0) {
         return 0;
-    }else if (num === 1) {
+    } else if (num === 1) {
         return 1;
     } else {
         return fibonacci(num - 1) + fibonacci(num - 2);
@@ -85,10 +92,10 @@ function fibonacci(num) {
  * @param {node} input is a node.
  * @returns{String} the concated value of the node.
  */
-function outputList(input){
-    if(input.next === null){
+function outputList(input) {
+    if (input.next === null) {
         return input.value + " printed to console";
-    }else 
+    } else
         return input.value + " " + outputList(input.next);
 }
 
@@ -97,14 +104,14 @@ function outputList(input){
  * @param {node} input is a node.
  * @returns{String} the concated value of the node.
  */
-function outputListLoop(input){
+function outputListLoop(input) {
     let str = "";
-    while(input.next !== null){
+    while (input.next !== null) {
         str += input.value + " ";
         input = input.next;
-    } 
-        str += input.value + " printed to console";
-        return str;
+    }
+    str += input.value + " printed to console";
+    return str;
 }
 
 /**
@@ -112,9 +119,9 @@ function outputListLoop(input){
  * @param {node} input is a node.
  * @returns{String} the reversed concated value of the node.
  */
-function reverseList(input){
+function reverseList(input) {
 
-    return reverseListHelper(input) + " printed to console"
+    return reverseListHelper(input) + " printed to console";
 }
 
 /**
@@ -122,10 +129,10 @@ function reverseList(input){
  * @param {node} input is a node.
  * @returns{String} the reversed concated value of the node.
  */
- function reverseListHelper(input){
-    if(input.next === null){
+function reverseListHelper(input) {
+    if (input.next === null) {
         return input.value;
-    }else 
+    } else
         return reverseListHelper(input.next) + " " + input.value;
 }
 
@@ -134,12 +141,41 @@ function reverseList(input){
  * @param {node} input is a node.
  * @returns{String} the reversed concated value of the node.
  */
-function reverseListLoop(input){
+function reverseListConsole(input) {
+    if (input.next === null) {
+        console.log(input.value);
+    } else {
+        reverseListConsole(input.next);
+        console.log(input.value);
+    }
+}
+
+let listConsole = {
+    value: 1,
+    next: {
+        value: 2,
+        next: {
+            value: 3,
+            next: {
+                value: 4,
+                next: null
+            }
+        }
+    }
+};
+reverseListConsole(listConsole);
+/**
+ * 
+ * @param {node} input is a node.
+ * @returns{String} the reversed concated value of the node.
+ */
+function reverseListLoop(input) {
     let str = "";
-    while(input.next !== null){
+    while (input.next !== null) {
         str = input.value + " " + str;
         input = input.next;
-    } 
-        str = input.value + " " + str + "printed to console";
-        return str;
+    }
+    str = input.value + " " + str + "printed to console";
+    return str;
 }
+

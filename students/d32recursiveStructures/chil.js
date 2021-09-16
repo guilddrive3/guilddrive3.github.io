@@ -16,7 +16,7 @@ function contains(root, name) {
         let chil;
         chil = root.value == name;
         console.log(" outside ", chil, root.value, root.descendents.length);
-        for (i = 0; i < root.descendents.length; i++) {
+        for ( i = 0; i < root.descendents.length; i++) {
             console.log(" inside ", chil, root.value, root.descendents[i].value);
             let vall = contains(root.descendents[i], name);
             chil = chil || vall;
