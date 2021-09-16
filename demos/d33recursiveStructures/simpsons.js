@@ -39,3 +39,24 @@ function TreeNode(value) {
 }
  
 treeWalk(abe);
+
+/* Given a target value, return true or false if there is a node in the tree with the target value. E.g.,
+contains(tree, “Lisa”) → true
+contains(tree, “Crusty”) → false
+*/
+   /**
+    * 
+    * @param {treeNode} treeNode is a node of the tree
+    * @returns {undefined} just logs names to console
+    */
+    function treeContains(treeNode){
+        console.log(treeNode.value);
+        /* base -- check for descendents array empty */
+        if (treeNode.descendents.length === 0){
+            //done
+        } else {
+            for (const node of treeNode.descendents){
+                treeContains(node);
+            }
+        }
+    }
