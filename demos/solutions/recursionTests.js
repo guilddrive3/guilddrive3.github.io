@@ -6,15 +6,15 @@ Comment these out when you send it to the browser with the index.html mocha setu
 */
 const assert = require("assert");  //always need this with node
 const myExports = require("./recursion.js");  //with node need the name of your file with your functions here
-// const sumTo = myExports.sumTo;  //do this for all of the functions used in the Mocha tests
-// const factorial = myExports.factorial; 
-// const fibonacci = myExports.fibonacci; 
+const sumTo = myExports.sumTo;  //do this for all of the functions used in the Mocha tests
+const factorial = myExports.factorial; 
+const fibonacci = myExports.fibonacci; 
 
 /* the following are for Thursday */
 const outputList = myExports.outputList; 
-// const outputListLoop = myExports.outputListLoop; 
-// const reverseList = myExports.reverseList; 
-// const reverseListLoop = myExports.reverseListLoop; 
+const outputListLoop = myExports.outputListLoop; 
+const reverseList = myExports.reverseList; 
+const reverseListLoop = myExports.reverseListLoop; 
 
 
 let list = {
