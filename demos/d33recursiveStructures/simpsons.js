@@ -27,7 +27,8 @@ function TreeNode(value) {
     * @returns {undefined} just logs names to console
     */
    function treeWalk(treeNode){
-    console.log(treeNode.value);
+   // console.log(treeNode.value);
+   treeNode.value = treeNode.value + " Simpson";
     /* base -- check for descendents array empty */
     if (treeNode.descendents.length === 0){
         //done
@@ -39,21 +40,27 @@ function TreeNode(value) {
 }
  
 treeWalk(abe);
+console.log(JSON.stringify(abe));
 
 /* Given a target value, return true or false if there is a node in the tree with the target value. E.g.,
 contains(tree, “Lisa”) → true
 contains(tree, “Crusty”) → false
 */
+let found = false;
    /**
     * 
     * @param {treeNode} treeNode is a node of the tree
-    * @returns {undefined} just logs names to console
+    * @param {string} targetName is name to search for
+    * @returns {boolean} true if targetName is in the tree
     */
-    function treeContains(treeNode){
-        console.log(treeNode.value);
+    function treeContains(treeNode, targetName){
+        if (treeNode.value === targetName){
+            return true;
+        }
         /* base -- check for descendents array empty */
+
         if (treeNode.descendents.length === 0){
-            //done
+
         } else {
             for (const node of treeNode.descendents){
                 treeContains(node);
