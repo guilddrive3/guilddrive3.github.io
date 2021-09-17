@@ -38,7 +38,7 @@ describe("inBetween", function () {
     it("tests inBetween works with Array.filter", function () {
         let filter3to6 = inBetween(3, 6);
         const arr2 = [0, 4, 5, 10, 6, 100];
-        assert.deepEqual(arr2.filter(filter3to6), [4, 5]);
+        assert.deepEqual(arr2.filter(filter3to6), [4, 5, 6]);
     });
 });
 
