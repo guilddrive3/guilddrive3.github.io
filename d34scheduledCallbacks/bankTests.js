@@ -11,11 +11,11 @@ describe("bank tests", function () {
 
   const bank = makeBank();
     it("bankBalance", function () {
-        assert.strictEqual(bank.bankBalance(), 65);
+        assert.strictEqual(bank.bankBalance(), 85);
     });
 
     it("transactionsDB is private", function () {
-        assert.false(bank.transactionsDB in bank, false);
+        assert.strictEqual(bank.transactionsDB in bank, false);
     });
 });
 
