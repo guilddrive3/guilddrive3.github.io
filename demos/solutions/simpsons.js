@@ -27,11 +27,11 @@ function TreeNode(value) {
     * @returns {undefined} just logs names to console
     */
    function treeWalk(treeNode){
-   // console.log(treeNode.value);
-   treeNode.value = treeNode.value + " Simpson";
+   console.log(treeNode.value);
+   //treeNode.value = treeNode.value + " Simpson";
     /* base -- check for descendents array empty */
     if (treeNode.descendents.length === 0){
-        //done
+        return; 
     } else {
         for (const node of treeNode.descendents){
             treeWalk(node);
@@ -46,7 +46,7 @@ console.log(JSON.stringify(abe));
 contains(tree, “Lisa”) → true
 contains(tree, “Crusty”) → false
 */
-let found = false;
+
    /**
     * 
     * @param {treeNode} treeNode is a node of the tree
@@ -54,16 +54,22 @@ let found = false;
     * @returns {boolean} true if targetName is in the tree
     */
     function treeContains(treeNode, targetName){
-        if (treeNode.value === targetName){
+        if (treeNode.value === targetName){ //found it, return true
             return true;
-        }
-        /* base -- check for descendents array empty */
-
-        if (treeNode.descendents.length === 0){
-
-        } else {
+        } else if (treeNode.descendents.length === 0){ // base -- did not find and no further possibilities
+            return false;
+        } else {/* check each descendent, if any returns true then return true, else return false */
+            
             for (const node of treeNode.descendents){
-                treeContains(node);
+                if (treeContains(node, targetName) === true) {
+                    return true;
+                }
             }
+            /* no descendent returned true, so need to return false */
+            return false;
         }
     }
+
+    console.log("expect true: ", treeContains(abe, "Homer"));
+    console.log("expect true: ", treeContains(abe, "Lisa"));
+    console.log("expect false: ", treeContains(abe, "Bob"));
