@@ -86,12 +86,12 @@ function getItemsPricedOver100(shopCart) {
     return items;
 }
 
-console.log("expect items 1 and 3: ", getItemsPricedOver100(shoppingCart));
-
-
-/**
- * 
- * @param {Array} shopCart is array of objects
+console.log("expect items 1 and 3: ", get  ItemsPricedOver100(shoppingCart));
+  
+  
+/**  
+ *   
+ * @param {Array} shopCart is array of ob  jects
  * @returns {Object} new object including only name and price
  */
 function findCheapestItem(shopCart){
