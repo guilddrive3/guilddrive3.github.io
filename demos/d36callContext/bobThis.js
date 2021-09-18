@@ -2,7 +2,7 @@
 /* eslint-disable */
 
 // eslint-disable-next-line require-jsdoc
-function foo() { this.apple = "pie";  console.log("inside function foo: ", this); }
+function foo() {this.apple = "pie";  console.log("inside function foo: ", this); }
 const bob = {
     log: function () {
         console.log(this);
