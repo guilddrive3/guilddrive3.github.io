@@ -95,3 +95,24 @@ function collectValues(treeNode, valuesArray) {
 }
 
 console.log("array of all names: ", JSON.stringify(collectValues(abe, [])));
+
+/**
+* 
+* @param {treeNode} treeNode is a node of the tree
+* @param {Array} valuesArray holds the values
+* @returns {Array} Array of all values in the tree
+*/
+function collectValuesV2(treeNode) {
+      if (treeNode.descendents.length === 0) { // base case
+        return treeNode.value;
+    } else {/* go through all descendents and return array when done */
+        let valuesArray = [];
+        valuesArray.push(treeNode.value);
+        for (const node of treeNode.descendents) {
+            valuesArray = valuesArray.concat(collectValuesV2(node));
+        }
+        return valuesArray;
+    }
+}
+
+console.log("array of all names: ", JSON.stringify(collectValuesV2(abe)));
