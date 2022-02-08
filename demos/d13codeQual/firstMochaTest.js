@@ -1,6 +1,9 @@
 "use strict";
 /* eslint-disable */
 
+//basic example of using mocha (test code in same file)
+
+"use strict";
 const assert = require("assert");
 
 function checkPrime(num) {
@@ -16,3 +19,4 @@ describe("checkPrime returns true if argument is prime", function () {
         assert.strictEqual(checkPrime(77), false);
     });
 });
+

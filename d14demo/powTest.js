@@ -4,12 +4,12 @@
 /* You need the assert and function name declarations to test in node.  
 
 Comment these out when you send it to the browser with the index.html mocha setup page.
-*/
+
 
 const assert = require("assert");  //always need this with node
 const myExports = require("./pow.js");  //with node need the name of your file with your functions here
 const pow = myExports.pow;  //do this for all of the functions used in the Mocha tests
- 
+ */
 
 describe("pow", function () {
 
