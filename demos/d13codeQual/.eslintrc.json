@@ -10,8 +10,8 @@
     "no-console": "off",
    "no-debugger": "off",
     "no-unused-vars": "warn",
-   "id-length": [2, {"min": 3, "max": 30, "exceptions": ["i","j"]}],
-    "camelcase": [2, {"properties": "always"}],
+   "id-length": ["error", {"min": 3, "max": 30, "exceptions": ["i","j"]}],
+    "camelcase": ["error", {"properties": "always"}],
     "valid-jsdoc": ["error"],
     "require-jsdoc": ["error", {
     "require": { "FunctionDeclaration": true,

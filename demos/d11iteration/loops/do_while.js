@@ -1,8 +1,10 @@
+"use strict";
+
 const prompt = require("prompt-sync")();
 
-let user_input;
+let userInput;
 do {
-  user_input = prompt("Please enter a command: ");
-  console.log("You command was: " + user_input);
-} while (user_input !== 'stop');
+  userInput = prompt("Please enter a command: ");
+  console.log("You command was: " + userInput);
+} while (userInput !== 'stop');
 console.log("exiting...");

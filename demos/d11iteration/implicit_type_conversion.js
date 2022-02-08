@@ -1,3 +1,5 @@
+"use strict";
+
 let x = 5;
 let y = "7";
 let test = true;
