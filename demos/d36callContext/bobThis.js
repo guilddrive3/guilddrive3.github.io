@@ -1,4 +1,4 @@
-//"use strict";
+"use strict";
 /* eslint-disable */
 
 // eslint-disable-next-line require-jsdoc
@@ -9,7 +9,7 @@ const bob = {
     }
 };
 
-console.log("this outside object: ", this); // this is window in browser (‘global’ in node)
+console.log("this outside object: ", this); // this is window in browser ({}} in node)
 foo(); //foo() is called by global or window object 
 bob.log();//log() is called by the object, bob 
 

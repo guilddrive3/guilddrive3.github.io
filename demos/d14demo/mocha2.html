@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- adam bien  https://www.youtube.com/watch?v=s9i6IN5zDtY  ???  2/13/2022 not working ... -->
+<!--  2/13/2022 looks to be working based on:  https://github.com/vitalets/mocha-es6-modules/blob/master/index.html  -->
+<head>
+    <meta charset="utf-8" />
+    <title>Mocha Tests</title>
+    <!-- download style info to make the page look nice -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
+</head>
+
+<body>
+    <div id="mocha"></div> <!-- placeholder used by mocha to insert test results on page-->
+
+    <!-- download mocha and chai libraries -->
+    <script src="https://unpkg.com/chai/chai.js"></script>
+    <script src="https://unpkg.com/mocha/mocha.js"></script>
+
+
+    <!-- some setup code -->
+    <script class="mocha-init">
+        mocha.setup('bdd');
+        mocha.checkLeaks();
+        let assert = chai.assert;
+    </script>
+
+    <!-- put links to your code and tests here -->
+    <script type="module" src="pow.mjs"></script>
+    <script type="module" src="powTest.mjs"></script>
+    <script type="module" src="run.mjs"></script>
+
+</body>
+
+</html>
