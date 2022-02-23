@@ -21,26 +21,8 @@ const exp2 = [ "{", "{", "}", "{" ];
  */
 function checkBalance(exp){
     const stack = [];
-    for (let bracket of exp){
-        //if left then push
-        if (bracket === "{") {
-            stack.push(bracket);
-        } else { //have a }
-            //if right then pop and check value is left
-            const popBracket = stack.pop();
-            if (popBracket === "{") {
-                continue;
-            } else {
-                return false;
-            }
-        } 
-    }
-    //done with the array, check for stack empty
-    if (stack.length === 0) {
-        return true;
-    } else {
-        return false;
-    }
+
+    return undefined;
 }
 console.log("expect true: ", checkBalance(exp1));
 console.log("expect false: ", checkBalance(exp2));
