@@ -9,9 +9,9 @@ let gpa;
 if (grade === 'A') {
   gpa = 4.0;
 } else if (grade === 'B') {
-  gpa = 3.6;
+  gpa = 3.0;
 } else if (grade === 'C') {
-  gpa = 3.2;
+  gpa = 2.0;
 } else {
   gpa = 0.0;
 } 

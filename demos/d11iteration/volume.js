@@ -1,6 +1,6 @@
 "use strict";
 
-const prompt = require("prompt-sync")();
+const prompt = require("prompt-sync")();
 
 const radius = prompt("enter radius");
 const height = prompt("enter height");
