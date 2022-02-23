@@ -11,10 +11,10 @@ switch (grade) {
     gpa = 4.0;
     break;
   case 'B':
-    gpa = 3.6;
+    gpa = 3;
     break;
   case 'C':
-    gpa = 3.2
+    gpa = 2
     break;
   default:
     gpa = 0.0;
