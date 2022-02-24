@@ -8,7 +8,7 @@ const assert = require("assert");
 
 function checkPrime(num) {
     for (let i = 2; i < num; i++)
-        if (num % i === 0) return false;
+        if (num % i === 0) return true;
     return num > 1;
 }
 describe("checkPrime returns true if argument is prime", function () {
