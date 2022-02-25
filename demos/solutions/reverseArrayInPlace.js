@@ -36,6 +36,10 @@ describe("reverseArray", function () {
     });
     it("tests that the original array is returned", function () {
         const testArr = [1, 2, 3, 4, 5];
-        assert.strictEqual(reverseArrayInPlace(testArr), testArr);
+        const reversedArray = reverseArrayInPlace(testArr);
+        assert.strictEqual(reversedArray, testArr);
+        testArr.pop();
+        assert.strictEqual(reversedArray, testArr);
+        assert.deepEqual(reversedArray, testArr);
     });
 });
