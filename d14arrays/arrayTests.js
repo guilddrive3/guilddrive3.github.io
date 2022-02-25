@@ -102,6 +102,10 @@ describe("reverseArray", function () {
         assert.deepEqual(reverseArrayInPlace([1, 2, 3, 4, 5]), [5, 4, 3, 2, 1]);
         assert.deepEqual(reverseArray([1, 2, 3, 4, 5]), [5, 4, 3, 2, 1]);
     });
+    it("tests that the original array is returned", function () {
+        const testArr = [1, 2, 3, 4, 5];
+        assert.strictEqual(reverseArrayInPlace(testArr), testArr); //element order may be different, but it is the same reference
+    });
 });
 
 /*
