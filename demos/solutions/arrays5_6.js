@@ -1,7 +1,7 @@
 "use strict";
 
 
-/* the following solutions for homeworks 5 and 6 are courtesy of Azamit */
+/* the following are solutions for homeworks 5 and 6 of arrays lesson */
 /**
  * 
  * @param {Array} studentAnswers an array of arrays
