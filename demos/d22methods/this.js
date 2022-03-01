@@ -1,4 +1,4 @@
-"use strict";  
+//"use strict";  
 /* eslint-disable */
 
 /**
@@ -10,6 +10,7 @@ function setLatLong() {
     console.log(this);
   }
 
-  const setLL = setLatLong(); // undefined
+ // const setLL = setLatLong(); // undefined
   console.log("lat : ", lat);
   console.log("setLL : ", setLL);
+  const setLL = setLatLong(); // undefined
