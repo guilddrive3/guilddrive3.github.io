@@ -21,6 +21,8 @@ bank.transactionsDB = [
     { customerId: 3, customerTransactions: [5, -5, 55] }];
 
 
+/* this is complete, no need to modify.
+Saves this amount to the customerTransactions array for customerId id. */
 bank.saveTransaction = function (id, amount) {
     const customer = bank.transactionsDB.find(customer => customer.customerId === id);
     customer.customerTransactions.push(amount);
