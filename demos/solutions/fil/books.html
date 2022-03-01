@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Book List</title>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <p>
+        Book Title
+        <br />
+        <input type="text" id="title" size="80" />
+    </p>
+    <p>
+        Author
+        <br />
+        <input type="text" id="author" size="80" />
+    </p>
+
+    <p>
+        libraryID
+        <br />
+        <input type="number" id="libraryID" size="80" />
+    </p>
+
+    <input type="button" value="Add book to library" id="addBtn" onclick="addBookToLibrary();" />
+    <input type="button" value="Show titles" id="titlesBtn" onclick="showTitles();" />
+    <input type="button" value="Scramble" id="scrambleBtn" onclick="scramble();" />
+    <input type="button" value="show author" id="authorBtn" onclick="showAuthor();" />
+    <input type="button" value="show ID" id="iDBtn" onclick="showLibraryID();" />
+
+    <p>
+        <textarea id="displayArea" rows="10" cols="80"></textarea>
+        <textarea id="authorDisplayArea" rows="10" cols="80"></textarea>
+        <textarea id="idDisplayArea" rows="10" cols="80"></textarea>
+        <textarea id="displayScrumble" rows="10" cols="80"></textarea>
+    </p>
+
+</body>
+
+</html>
