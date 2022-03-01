@@ -1,6 +1,6 @@
 "use strict";
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-module.exports = {findTitles }; //add all of your function names here that you need for the node mocha tests
+//module.exports = {findTitles }; //add all of your function names here that you need for the node mocha tests
 
 
 let library = [
@@ -43,6 +43,7 @@ function findTitles() {
  * Event handler for Add book button.  Creates and adds book to the library
  */
 function addBook(){
-    const title = document.getElementById("title"); //retrieves the book title from the title textbox
+    const title = document.getElementById("title");
+    alert("title is ", title.value); //retrieves the book title from the title textbox
     //finish the implementation -- get the author, create a book object, and add to the library array
 }
