@@ -45,5 +45,6 @@ function findTitles() {
 function addBook(){
     const title = document.getElementById("title"); //retrieves the book title from the title textbox
     console.log("title is: ", title.value);
+    alert("title:  " + title.value);
     //finish the implementation -- get the author, create a book object, and add to the library array
 }
