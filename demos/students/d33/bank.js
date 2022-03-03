@@ -78,7 +78,7 @@ return customer;
 bank.bankBalance = function () {
 //IMPLEMENT THIS
 let totalBalance = 0;
-for(let customers of bank.transactionDB){
+for(let customers of bank.transactionsDB){
     for(let transactions of customers.customerTransactions){
         totalBalance = totalBalance + transactions;
     }
