@@ -10,7 +10,7 @@ function sayHi() {
 
 const myHi = {abc: 123, say: sayHi};
 
-myHi.say();
+const newVar = myHi.say;
 
 myHi.apple = "fruit";
 console.log(myHi);
