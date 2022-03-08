@@ -35,3 +35,22 @@ function multiplyEvens(...args){
     }
     return prod;
 }
+
+// let a, b, c, d, e;  
+// a = [1,2,3];  
+// b = "dog";  
+// c = [42, "cat"];  
+
+//  d = a.concat(b, c); // [1, 2, 3, “dog”, 42, “cat”]
+//  console.log("d is: ", d);
+//  console.log("a is: ", a);
+
+ let a, b;  
+a = {x:1, y: {a:100,b:200}, z:3};
+b = { ...a };
+console.log(b) // {x:1, y:{a:100,b:200}, z:3}
+b.x = 100;
+b.y.a = 66;
+console.log(a) // {x:1, y: {a:100,b:200}, z:3}
+console.log(b) // {x:1, y:{a:66,b:200}, z:3}
+
