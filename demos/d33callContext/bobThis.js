@@ -1,15 +1,18 @@
 "use strict";
 /* eslint-disable */
 
-// eslint-disable-next-line require-jsdoc
-function foo() {this.apple = "pie";  console.log("inside function foo: ", this); }
+function foo() {
+    //this.apple = "pie";
+    console.log("inside function foo: ", this);
+}
 const bob = {
+    name: "Bob",
     log: function () {
         console.log(this);
     }
 };
 
-console.log("this outside object: ", this); // this is window in browser ({}} in node)
+console.log("this outside object: ", this); // this is window in browser ({} in node)
 foo(); //foo() is called by global or window object 
 bob.log();//log() is called by the object, bob 
 
