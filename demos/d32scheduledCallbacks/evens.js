@@ -51,6 +51,6 @@ b = { ...a };
 console.log(b) // {x:1, y:{a:100,b:200}, z:3}
 b.x = 100;
 b.y.a = 66;
-console.log(a) // {x:1, y: {a:100,b:200}, z:3}
+console.log(a) // {x:1, y: {a:66,b:200}, z:3} -- not a deep clone since b.y.a changes a.y.a
 console.log(b) // {x:1, y:{a:66,b:200}, z:3}
 
