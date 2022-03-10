@@ -12,9 +12,11 @@ const bob = {
     }
 };
 
-console.log("this outside object: ", this); // this is window in browser ({} in node)
-foo(); //foo() is called by global or window object 
 bob.log();//log() is called by the object, bob 
+foo(); //foo() is called by global or window object 
+console.log("this outside object: ", this); // this is window in browser ({} in node)
+
+
 
 
 //https://stackoverflow.com/questions/34838659/the-this-keyword-behaves-differently-in-nodejs-and-browser
