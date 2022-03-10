@@ -14,4 +14,7 @@ function a() {
   b.log(); 
   let mylog = b.log;
   mylog();
+
+
+
   
