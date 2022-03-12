@@ -12,8 +12,8 @@ function User(firstname, lastname, birthDate) {
     this.lastname = lastname;
     this.birthDate = birthDate;
 }
-User.prototype = {};
-User.prototype.getFullname = getFullName;
+
+User.prototype.getFullName = getFullName;
 User.prototype.getAge = getAge;
 
 let user1 = new User('John', 'Smith', new Date('2000-10-01'));
