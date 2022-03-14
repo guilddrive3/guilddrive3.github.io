@@ -22,15 +22,15 @@ let hamster = {
     __proto__: hamster
   };
   
-  // Speedy one found the food
+  // Speedy found the food
   speedy.eat("apple");
   console.log( speedy.stomach ); // apple
   
-  // Lazy one's stomach is empty
+  // Lazy's stomach is empty
   console.log( lazy.stomach ); // <nothing>
 
   speedy.eat("orange");
-  console.log( speedy.stomach ); // apple
+  console.log( speedy.stomach ); // apple, orange
   
-  // Lazy one's stomach is empty
+  // Lazy's stomach is empty
   console.log( lazy.stomach ); // <nothing>

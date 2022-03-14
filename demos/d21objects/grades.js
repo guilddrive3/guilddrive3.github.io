@@ -61,3 +61,5 @@ function scoreStudent(student, answers) {
 }
 
 console.log("quiz results are: ", gradeQuiz(quiz, answers));
+console.log("quiz is: ", quiz);
+
