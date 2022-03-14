@@ -6,7 +6,7 @@ const Account = acc.Account;  //do this for all of the functions used in the Moc
 /* exports at end of file since exporting an object, which can only be referenced after definition   */
 
 
-
+class SavingsAccount{};
 
 
 
