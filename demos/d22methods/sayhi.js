@@ -4,7 +4,7 @@
 const manager = {
     name: "John",
     age: 27,
-    job: "Software Engineer"
+    job: "Software Engineer",
     sayHi: sayHowdy
   };
   const intern= {
@@ -19,8 +19,7 @@ const manager = {
    */
   function sayHowdy() {
      //IMPLEMENT THIS
-     const output = "Hello, my name is " + this.name + 
-     ". I am " + this.age + ".  My job is " + this.job + ".";
+     const output = "implement this";
      console.log(output);
   }
   
