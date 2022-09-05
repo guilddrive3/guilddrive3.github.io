@@ -7,17 +7,17 @@ let grade = prompt("Please enter your grade: ");
 let gpa;
 
 switch (grade) {
-  case 'A':
+  case "A":
     gpa = 4.0;
     break;
-  case 'B':
+  case "B":
     gpa = 3;
     break;
-  case 'C':
+  case "C":
     gpa = 2
     break;
   default:
     gpa = 0.0;
 }
 
-console.log('your gpa is ' + gpa);
+console.log("your gpa is " + gpa);

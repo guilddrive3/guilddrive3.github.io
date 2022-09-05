@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 "use strict";
 
 let day_of_week = 7;

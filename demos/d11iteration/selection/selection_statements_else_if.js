@@ -9,13 +9,13 @@ let grade;
 
 
 if (gpa === 4.0) {
-  grade = 'A';
+  grade = "A";
 } else if (gpa >= 3.8) {
-  grade = 'B';
+  grade = "B";
 } else if (gpa >= 3.6) {
-  grade = 'C'
+  grade = "C"
 } else {
-  grade = 'NC';
+  grade = "NC";
 }
 
-console.log('your grade is ' + grade);
+console.log("your grade is " + grade);
