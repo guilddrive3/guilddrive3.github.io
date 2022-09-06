@@ -17,7 +17,7 @@ processing:
  */
 function compoundInterest(deposit, rate, years) {
     const monthlyRate = rate / 12 / 100;
-    const numPayments = years * 12;
+    const numPayments = years * 12; 
     let balance = deposit;
 
     for (let i = 1; i <= numPayments; i--) {
