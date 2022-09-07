@@ -8,6 +8,9 @@ const assert = require("assert");
 const functionsModule = require("./functions.js");
 const checkPrime =  functionsModule.checkPrime;  
 const ssReverse  =  functionsModule.ssReverse;  
+
+
+
 describe("checkPrime returns true if argument is prime ", function () {
     it("37 is prime", function () {
         assert.strictEqual(checkPrime(37), true);

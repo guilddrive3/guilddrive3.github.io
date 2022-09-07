@@ -11,7 +11,7 @@
     },
     "rules": {
         "strict": [
-            "error",
+            "warn",
             "global"
         ],
         "semi": [
@@ -19,7 +19,7 @@
             "always"
         ],
         "quotes": [
-            "error",
+            "warn",
             "double"
         ],
         "no-alert": "off",
@@ -27,7 +27,7 @@
         "no-debugger": "off",
         "no-unused-vars": "warn",
         "id-length": [
-            "error",
+            "warn",
             {
                 "min": 3,
                 "max": 30,
@@ -38,17 +38,17 @@
             }
         ],
         "camelcase": [
-            "error",
+            "warn",
             {
                 "properties": "always"
             }
         ],
         "no-var": "error",
         "valid-jsdoc": [
-            "error"
+            "warn"
         ],
         "require-jsdoc": [
-            "error",
+            "warn",
             {
                 "require": {
                     "FunctionDeclaration": true,

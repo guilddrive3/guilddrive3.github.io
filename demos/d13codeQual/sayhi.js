@@ -6,15 +6,13 @@
 
 function sayHi(name) {
 
-    console.log("Hi " , name);
-  
-    //return "Bye " + name;
+  console.log("Hi ", name);
 
-    return "hi there!!!";
-  
-  }
-  //const sayHiReturn = console.log("hi there!!!" );
-  const sayHiReturn = console.log(sayHi());
+  //return "Bye " + name;
 
-  console.log("sayHiReturn is:" , sayHiReturn);
-  
+  return "hi there!!!";
+}
+//const sayHiReturn = console.log("hi there!!!" );
+const sayHiReturn = console.log(sayHi());
+
+console.log("sayHiReturn is:", sayHiReturn);
