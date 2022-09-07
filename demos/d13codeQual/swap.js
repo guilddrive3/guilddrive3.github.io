@@ -11,10 +11,9 @@ function swap(a, b) {
     a = b;
     b = temp;
    //debugger;
-    x = 55;
 }
 
 let x = 5;
 let y = 10;
-swap(y, x);
+swap(x, y);
 console.log("expect 10, 5", x, y);  //?? is swap working
