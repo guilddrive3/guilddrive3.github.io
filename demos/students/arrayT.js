@@ -1,8 +1,7 @@
 "use strict";
 
 /* You need the assert and function name declarations to test in node.  
-Comment these out when you send it to the browser with the index.html mocha setup page.*/
-
+Comment these out when you send it to the browser with the index.html mocha setup page. */
 const assert = require("assert");  //always need this with node
 const myExports = require("./arrays.js");  //with node need the name of your file with your functions here
 const maxOfThree = myExports.maxOfThree;  //do this for all of the functions used in the Mocha tests
@@ -113,7 +112,6 @@ describe("reverseArray", function () {
 5.  Write a function, scoreExams, that takes an array of arrays of student answers and an array of the correct answers.  
 It should compare each student’s answers against the correct answers and return an array holding the scores of each student.  The score 
 for each student is a count of the number of correct answers (i.e., matches with the key of correct answers).  For example
-
 const studentAnswers = [[1, 1, 2], [2, 1, 2], [3, 1, 3]];
 const correctAnswers = [3, 1, 2];
 scoreExams(studentAnswers, correctAnswers)); --> [2, 2, 2]
