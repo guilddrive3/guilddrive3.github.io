@@ -97,11 +97,15 @@ describe("reverseArray", function () {
     });
     it("tests reverse even number elements", function () {
         assert.deepEqual(reverseArrayInPlace(["A", "B", "C", "D"]), ["D", "C", "B", "A"]);
+      });
+    it("tests reverse in place even number elements", function () {
         assert.deepEqual(reverseArray(["A", "B", "C", "D"]), ["D", "C", "B", "A"]);
     });
     it("tests reverse odd number elements", function () {
-        assert.deepEqual(reverseArrayInPlace([1, 2, 3, 4, 5]), [5, 4, 3, 2, 1]);
         assert.deepEqual(reverseArray([1, 2, 3, 4, 5]), [5, 4, 3, 2, 1]);
+    });
+    it("tests reverseinplace odd number elements", function () {
+        assert.deepEqual(reverseArrayInPlace([1, 2, 3, 4, 5]), [5, 4, 3, 2, 1]);
     });
     it("tests that the original array is returned", function () {
         const testArr = [1, 2, 3, 4, 5];
