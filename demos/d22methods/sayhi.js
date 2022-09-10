@@ -24,8 +24,8 @@ const manager = {
   }
   
   // add sayHi function to both objects
-  manager.sayHi = sayHowdy;
-  intern.sayHi = sayHowdy;
+  // manager.sayHi = sayHowdy;
+  // intern.sayHi = sayHowdy;
 
   
   manager.sayHi(); // Hello, my name is John. I am 27.  My job is Software Engineer.'
