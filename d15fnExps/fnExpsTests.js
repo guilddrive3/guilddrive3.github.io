@@ -55,10 +55,10 @@ describe("times100", function () {
     describe("myMap", function () {
         const testArray = [-10, 0, 10, 20];
         it("tests myMap on triples anonymous function", function () {
-            assert.deepStrictEqual(myMap(testArray /* YOUR CODE HERE */), [-30, 0, 30, 60]);
+            assert.deepStrictEqual(myMap(testArray,  /* YOUR CODE HERE */), [-30, 0, 30, 60]);
         });
         it("tests myMap on triples arrow function", function () {
-            assert.deepStrictEqual(myMap(testArray /* YOUR CODE HERE */), [-30, 0, 30, 60]);
+            assert.deepStrictEqual(myMap(testArray, /* YOUR CODE HERE */), [-30, 0, 30, 60]);
         });
     });
 
