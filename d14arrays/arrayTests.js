@@ -89,7 +89,9 @@ describe("findLongestWord", function () {
 4.	Reverse an Array 
 Arrays have a reverse method that changes the array by inverting the order in which its elements appear. For this exercise, write two functions, reverseArray and 
 reverseArrayInPlace. The first, reverseArray, takes an array as argument and produces a new array that has the same elements in the inverse order. The second, 
-reverseArrayInPlace, does what the reverse method does: it modifies the array given as argument by reversing its elements. Neither may use the standard reverse method. 
+reverseArrayInPlace, does what the reverse method does: it modifies the array given as argument by reversing its 
+elements. This is a method that is very space efficient.  It does not create a new array or copy of the array.  
+It returns the original array. Neither may use the standard reverse method. 
 */
 describe("reverseArray", function () {
     it("tests reverseArray odd number elements", function () {
