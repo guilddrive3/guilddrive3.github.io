@@ -14,3 +14,5 @@ function setLatLong() {
   console.log("lat : ", lat);
   console.log("setLL : ", setLL);
   //const setLL = setLatLong(); // undefined
+
+  let x = 'abc';  
