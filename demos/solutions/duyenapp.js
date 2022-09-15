@@ -153,11 +153,12 @@ function scramble() {
             optString += c[i] + " ";
         }
     }
-    if (c[c.length - 1].length === c[c.length - 2].length) {
-        optString += c[c.length - 1];
-    } else {
-        optString += c[c.length - 1];
-    }
+    optString += c[c.length - 1];//for loop only goes to length - 2, need to also get last word
+    // if (c[c.length - 1].length === c[c.length - 2].length) {
+    //     optString += c[c.length - 1];
+    // } else {
+    //     optString += c[c.length - 1];
+    // }
     return optString;
 }
 

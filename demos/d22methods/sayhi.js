@@ -19,7 +19,8 @@ const manager = {
    */
   function sayHowdy() {
      //IMPLEMENT THIS
-     const output = "implement this";
+     const output = "Hello, my name is " + this.name + 
+     ".  I am " + this.age + ".  My job is " + this.job + "."
      console.log(output);
   }
   
