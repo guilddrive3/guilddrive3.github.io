@@ -1,7 +1,24 @@
 "use strict";
+/* eslint-disable */
+/* reduce the array to the product of the numbers (“expect 120”)
+reduce the array to the max of the numbers (“expect 5”)
+*/
 
-let arr = [1, 2, 3, 4, 5];
-let result = arr.reduce(function (sum, current) { return sum + current; }, 0);
-//let result2 = arr.reduce((sum, current) => sum + current, 0);
-console.log(result); // 15
-//console.log(result2); // 15
+
+const arr = [1, 2, 3, 4, 5];
+const result = arr.reduce(function (product, current) { return product * current; }, 1);
+
+console.log("expect 120: ", result);
+
+function checkMax(max, current) {
+    if (current > max) {
+        return current;
+    } else {
+        return max;
+    }
+}
+
+const max = arr.reduce(checkMax, 0);
+const max2 = arr.reduce((max, current) => current > max ? current : max, 0);
+console.log("expect 5: ", max);
+
