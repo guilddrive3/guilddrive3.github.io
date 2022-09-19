@@ -1,6 +1,6 @@
 "use strict";
 
-const numbers = [1, 5, 18, 2, 77, 108];
+
 /* use filter, find, and findIndex to find
  all the even numbers
  the first even number
@@ -20,6 +20,7 @@ function isEven(num) {
     }
 }
 
+const numbers = [1, 5, 18, 2, 77, 108];
 const evens = numbers.filter(isEven);
 console.log("expect [18,2,108: " , evens);
 
