@@ -52,6 +52,4 @@ describe("spread operator tests", function () {
 
         assert.deepEqual(combineObjs(obj1, obj2), {prop1: 1, prop2: 2, prop3: 1, prop4: 2});
     });
-
-
 });
