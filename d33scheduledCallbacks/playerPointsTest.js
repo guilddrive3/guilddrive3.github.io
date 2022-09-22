@@ -22,7 +22,7 @@ const teamStats = [player1, player2, player3];
 
     it("tests findTotalScores", function () {
         const expecteTotalPoints = [{jersey: 8, total: 13}, {jersey: 12, total: 30}, {jersey: 6, total: 16}];
-        assert.deepStrictEqual(findTotalScores(teamStats), expecteTotalPoints);
+        assert.deepEqual(findTotalScores(teamStats), expecteTotalPoints);
   });
 
 });
