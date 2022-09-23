@@ -6,7 +6,8 @@ module.exports = {findTotalScores, findTotalPlayerPoints }; //add all of your fu
 
 
 
-/*Be sure to use meaningful variable names and write JSdoc comments for findTotalScores and any helper functions such as findTotalPlayerPoints.
+/*Be sure to use meaningful variable names and write JSdoc comments for 
+findTotalScores and any helper functions such as findTotalPlayerPoints.
 Try to use map and reduce in your functions as appropriate. */
 
 
