@@ -4,7 +4,7 @@
 let animal = {
     walk: function() {
       if (!this.isSleeping) {
-        console.log(`I walk`);
+        console.log("I walk");
       }
     },
     sleep: function() {

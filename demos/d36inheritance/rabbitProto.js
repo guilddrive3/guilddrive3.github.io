@@ -7,17 +7,11 @@ let animal = { eats: true };
  * @param {string} name of rabbit
  * @returns {Object} constructor
  */
-// function Rabbit(name) {  this.name = name;}
-// // 
-// Rabbit.prototype = animal;
+function Rabbit(name) {  this.name = name;}
 
-let rabbit = 
-{
-    name: "White Rabbit",
-   // __proto__: animal
-};
-rabbit.__proto__ = animal;
-// new Rabbit("White Rabbit");
+Rabbit.prototype = animal;
+
+let rabbit = new Rabbit("White Rabbit");
 
 console.log(rabbit.eats); // true
 
