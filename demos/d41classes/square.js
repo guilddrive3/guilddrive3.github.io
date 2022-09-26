@@ -2,23 +2,15 @@
 /*eslint-disable */
 
 function area() { return this.side * this.side }
-const square1 =  {side: 5};
-square1.__proto__ = {area: area};
+const square1 =  //IMPLEMENTATION NEEDED
 
-function Square(side){
-    this.side = side;
-}
+function Square(//IMPLEMENTATION NEEDED
+){}
 
-function foo(){console.log("hi")};
-foo();
-Square.prototype.area = area;
 
-class Square2 {
-    constructor(side){
-        this.side = side;
-    }
-    area() { return this.side * this.side }
-}
+
+class Square2 {}//IMPLEMENTATION NEEDED{
+
 
 console.log("expect 25: ", square1.area());
 console.log("expect 1: ", Object.getOwnPropertyNames(square1).length);
@@ -38,20 +30,12 @@ constructor function
 prototype objects
 links
 */
-class MorphableSquare extends Square2{
-    constructor(size, color, className){
-        super(size);
-        this.color = color;
-        this.className = className;
-    }
-    /* has method morph that will set the value of the className property to the value of the color property */
-    morph(){
-        this.className = this.color;
-    }
+// class MorphableSquare extends Square2{
 
-}
-const morph2blue = new MorphableSquare(3, "blue", "white");
-const morph2green = new MorphableSquare(3, "green", "white");
-console.log("expect 9: ", morph2blue.area());
-console.log("expect 3: ", Object.getOwnPropertyNames(morph2blue).length);
+
+// }
+// const morph2blue = new MorphableSquare(3, "blue", "white");
+// const morph2green = new MorphableSquare(3, "green", "white");
+// console.log("expect 9: ", morph2blue.area());
+// console.log("expect 3: ", Object.getOwnPropertyNames(morph2blue).length);
 
