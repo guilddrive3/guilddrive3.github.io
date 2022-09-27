@@ -15,7 +15,7 @@ describe("bank tests", function () {
     });
 
     it("transactionsDB is private", function () {
-        assert.strictEqual(bank.transactionsDB in bank, false);
+        assert.strictEqual("transactionsDB" in bank, false);
     });
 });
 

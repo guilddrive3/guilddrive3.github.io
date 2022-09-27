@@ -49,12 +49,18 @@ constructor function
 prototype objects
 links
 */
-// class MorphableSquare extends Square2{
+class MorphableSquare extends Square2{
+    constructor(color, className){
+        this.color = color;
+        this.className = className;
+    }
+    morph(){ this.className = this.color;}
+}
 
 
 // }
-// const morph2blue = new MorphableSquare(3, "blue", "white");
-// const morph2green = new MorphableSquare(3, "green", "white");
-// console.log("expect 9: ", morph2blue.area());
-// console.log("expect 3: ", Object.getOwnPropertyNames(morph2blue).length);
+const morph2blue = new MorphableSquare(3, "blue", "white");
+const morph2green = new MorphableSquare(3, "green", "white");
+console.log("expect 9: ", morph2blue.area());
+console.log("expect 3: ", Object.getOwnPropertyNames(morph2blue).length);
 
