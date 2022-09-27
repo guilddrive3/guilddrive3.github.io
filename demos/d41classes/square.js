@@ -50,7 +50,8 @@ prototype objects
 links
 */
 class MorphableSquare extends Square2{
-    constructor(color, className){
+    constructor(side, color, className){
+        super(side);
         this.color = color;
         this.className = className;
     }
