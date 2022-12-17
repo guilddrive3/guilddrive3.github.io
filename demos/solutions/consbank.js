@@ -9,7 +9,7 @@ Use the consBankTests.js mocha file.  You will need to copy your bank.js and mod
 */
 
 /**
- * @returns {bank} factory function that builds and returns bank object
+ * @returns {bank} constructor function that builds and returns bank object
  */
 function MakeBank() {
     //implement this
