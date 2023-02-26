@@ -1,17 +1,17 @@
 "use strict";
 
-let x=false;
-let y = x || 5;
+const x=false;
+const y = x || 5;
 console.log(y);
 
-x=true;
-let z = x || 10;
+const foo=true;
+const z = foo || 10;
 console.log(z);
 
- y = x && 5;
-console.log(y);
+ const bar = foo && 5;
+console.log(bar);
 
-x=0;
-z = x && 10;
-console.log(z);
+const zero=0;
+const conj2 = zero && 10;
+console.log(conj2);
 

@@ -14,6 +14,6 @@ if (grade === "A") {
   gpa = 2.0;
 } else {
   gpa = 0.0;
-} 
+}
 
 console.log("your gpa is " + gpa);
