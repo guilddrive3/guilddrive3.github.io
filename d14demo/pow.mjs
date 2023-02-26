@@ -1,4 +1,4 @@
-"use strict";
+//"use strict";
 
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser 
 */
@@ -11,7 +11,7 @@
  * @param {Number} exponent is a positive integer
  * @returns {Number}  number to the power of the exponent
  */
-function pow(num, exponent) {
+export function pow(num, exponent) {
     let result = 1;
     for (let i = 0; i < exponent; i++) {
         result = result * num;

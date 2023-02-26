@@ -8,11 +8,7 @@ change it to sort in lexicographic descending order
 
 
 function descending(a, b) {
-     a = "" + a;
-     b = "" + b;
-    if (a > b) return -1;
-    if (a == b) return 0;
-    if (a < b) return 1;
+// implement this
   }
   let arr = [ 1, 15, 2 ];
   arr.sort(descending);

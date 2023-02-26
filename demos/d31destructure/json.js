@@ -18,6 +18,9 @@ const john = {
   console.log("johnClone is: ", johnClone);
 
   console.log(john === johnClone);
+
+  // console.log(john);
+  // console.log(john.toString());
   
 
   

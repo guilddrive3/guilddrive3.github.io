@@ -10,8 +10,3 @@ const john = {
     friends: [0,1,2,3]
   };
 
-  const johnJSON = JSON.stringify(john);
-  console.log("john string is: ", johnJSON);
-
-const johnClone = JSON.parse(johnJSON);
-console.log("johnCLone is: ", johnClone);

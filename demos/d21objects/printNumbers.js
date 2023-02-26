@@ -5,7 +5,7 @@ const numbers = {
     two: 22,
     three: 333,
     four: 444
-}
+};
 
 const properties = ["one", "two", "three", "four"];
 

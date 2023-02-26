@@ -1,5 +1,5 @@
-//"use strict";  
-/* eslint-disable */
+
+
 
 /**
  * @returns {undefined}
@@ -11,8 +11,5 @@ function setLatLong() {
   }
 
   const setLL = setLatLong(); // undefined
-  console.log("lat : ", lat);
   console.log("setLL : ", setLL);
-  //const setLL = setLatLong(); // undefined
 
-  let x = 'abc';  

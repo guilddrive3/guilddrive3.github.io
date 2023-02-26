@@ -4,6 +4,7 @@ let prompt = require("prompt-sync")();
 let userInput = prompt("Please enter a fraction number: ");
 console.log("---------------visual separator---------------");
 console.log(userInput);
+console.log(userInput + 15 === 25, "should be true if enter 10?");
 console.log(typeof userInput);
 console.log("---------------visual separator---------------");
 let num = Number(userInput);
