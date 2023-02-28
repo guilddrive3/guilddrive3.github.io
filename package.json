@@ -2,5 +2,5 @@
   "dependencies": {
     "prompt-sync": "^4.2.0"
   },
-  "type":  "module"
+  "type": "module"
 }

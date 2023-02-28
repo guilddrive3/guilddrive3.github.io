@@ -5,3 +5,9 @@ for (let i = 0; i < 3; i++) {
     console.log("Hello " + i);
 }
 
+const myarray = [1, 2, 3];
+
+for (let number of myarray){
+    console.log(number);
+}
+
