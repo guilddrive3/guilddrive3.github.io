@@ -1,4 +1,3 @@
-"use strict";
 /**
  * 
  * @param {*} a can be anything
