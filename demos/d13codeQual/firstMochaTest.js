@@ -1,10 +1,9 @@
-"use strict";
+//"use strict";
 /* eslint-disable */
 
 //basic example of using mocha (test code in same file)
 
-"use strict";
-const assert = require("assert");
+import assert from "node:assert/strict"; 
 
 function checkPrime(num) {
     for (let i = 2; i < num; i++)

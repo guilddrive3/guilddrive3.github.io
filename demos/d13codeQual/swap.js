@@ -6,10 +6,11 @@
  * @returns {undefined} 
  */
 function swap(a, b) {
+    debugger;
     let temp = a;
     a = b;
     b = temp;
-   //debugger;
+    x = 100;
 }
 
 let x = 5;
