@@ -6,19 +6,14 @@
 
 
 /**
- * 
- * @param {Number} num is any number
- * @param {Number} exponent is a positive integer
- * @returns {Number}  number to the power of the exponent
+ * @param {number} num is any number
+ * @param {number} exponent is a positive integer
+ * @returns {number}  number to the power of the exponent
  */
 export function pow(num, exponent) {
-    // function pow(num, exponent) {
     let result = 1;
     for (let i = 0; i < exponent; i++) {
         result = result * num;
     }
     return result;
 }
-
-function foo(){console.log("this is: ", this)};
-foo();
