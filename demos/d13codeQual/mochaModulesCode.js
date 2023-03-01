@@ -1,6 +1,6 @@
 /* eslint-disable no-irregular-whitespace */
 //functions.js
-"use strict"; 
+//"use strict"; 
 //module.exports = {checkPrime, ssReverse };
 /**
  * @param {number} num is an integer
