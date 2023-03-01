@@ -1,7 +1,5 @@
 /* eslint-disable no-irregular-whitespace */
 //basic example of using mocha (test code in same file)
-//"use strict";
-//const assert = require("assert");
 import assert from "node:assert/strict"; 
 
 /**
