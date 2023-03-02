@@ -27,3 +27,5 @@ Should compute correct average for an array of any size.
 */
 const arr1to9 = [1,2,3,4,5,6,7,8,9];
 console.log("expect 5: ", findAverage(arr1to9));
+
+
