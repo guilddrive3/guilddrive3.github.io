@@ -1,4 +1,4 @@
-"use strict";
+
 
 /* Write code to create an array named scores and fill it with 5 test scores 10, 20, 30, 40 and 50.
 Now write a function named findAverage, that takes an array as an argument and return average of the array values.

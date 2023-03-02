@@ -1,4 +1,4 @@
-"use strict";
+
 /* eslint-disable */
 function bar(){
     return 1;

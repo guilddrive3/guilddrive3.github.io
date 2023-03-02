@@ -1,28 +1,38 @@
-"use strict";
 
 /* Given an expression array exp, write a program to examine whether the pairs and the of “{“, “}” are balanced in exp.  
 	- Use a for .. of loop through the expression array
-	- push any right bracket onto a stack
-	- on a left bracket pop the stack and check that return value is a right bracket
-	- if not, then no balanced
+	- push any left bracket onto a stack
+	- on a right bracket pop the stack and check that return value is a left bracket
+	- if not, then not balanced
 	- if stack empty at end then balanced, else not balanced
-*/
-//Example:  
-const exp1 = [ "{", "}", "{", "{", "}", "}" ] ; 
-//Output: Balanced 
+
+Example:  
+ Input: exp = [ "{", "}", "{", "{", "}", "}“ ]  
+Output: Balanced 
  
-const exp2 = [ "{", "{", "}", "{" ];
-//Output: Not Balanced
+Input: exp = [ "{", "{", "}", "{" ] 
+Output: Not Balanced 
+*/
+const exp1 = [ "{", "}", "{", "{", "}", "}" ] ; 
+const exp2 = [ "{", "{", "}", "{" ] ;
 
 /**
  * 
- * @param {Array} exp is array of brackets --{ or }
- * @returns {boolean} true if balanced else false
+ * @param {Array} arr is array of brackets
+ * @returns {Boolean} true if balanced
  */
-function checkBalance(exp){
-    const stack = [];
+function balanced(arr){
 
-    return undefined;
+    /* - Use a for .. of loop through the expression array */
+
+       /* - push any left bracket onto a stack  */
+
+        /* - on a right bracket pop the stack and check that return value is a left bracket */
+
+    
+    /* - if stack empty at end then balanced, else not balanced */
+
 }
-console.log("expect true: ", checkBalance(exp1));
-console.log("expect false: ", checkBalance(exp2));
+
+console.log("expect true: ", balanced(exp1));
+console.log("expect false: ", balanced(exp2));

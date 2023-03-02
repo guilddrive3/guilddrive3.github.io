@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- adam bien  https://www.youtube.com/watch?v=s9i6IN5zDtY  ???  2/13/2022 not working ... -->
+<!--  2/13/2022 looks to be working based on:  https://github.com/vitalets/mocha-es6-modules/blob/master/index.html  -->
 <head>
     <meta charset="utf-8" />
     <title>Mocha Tests</title>
@@ -25,12 +27,14 @@
     </script>
 
     <!-- put links to your code and tests here -->
-    <!-- <script src="pow.mjs"   type="module"></script>-->
-     <script src="powTest.mjs"   type="module"></script> 
+    <script type="module" src="pow.js"></script>
+    <script type="module" src="powTest.js"></script>
+   <!-- <script type="module" src="run.js"></script> -->
 
     <script class="mocha-exec" type="module" >
         mocha.run();
     </script>
+
 </body>
 
 </html>
