@@ -1,13 +1,14 @@
 /* eslint-disable no-irregular-whitespace */
 
+
 import assert from "node:assert/strict"; 
-import {checkPrime, ssReverse}  from "./functions.js";   
+import {checkPrime, ssReverse}  from "./mochaModulesCode.js";   
 
 
 
 describe("checkPrime returns true if argument is prime ", function () {
     it("37 is prime", function () {
-        assert.strictEqual(checkPrime(36), true);
+        assert.strictEqual(checkPrime(37), true);
     });
     it(" 77 is not prime", function () {
         assert.strictEqual(checkPrime(77), false);

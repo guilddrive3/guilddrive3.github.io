@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: swap.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,35 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: swap.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @param {*} a can be anything
+ * @param {*} b can be anything
+ * @returns {undefined} 
+ */
+function swap() {
+    //debugger;
+    let temp = x;
+    x = y;
+    y = temp;
+    //x = 100;
+}
 
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+let x = 5;
+let y = 10;
+swap();
+console.log("expect 10, 5", x, y);  //?? is swap working
+</code></pre>
+        </article>
+    </section>
 
 
 

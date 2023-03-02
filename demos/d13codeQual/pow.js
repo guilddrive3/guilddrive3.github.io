@@ -12,3 +12,5 @@ function pow(num, power){
  return null;
 }
 
+let foo = pow(2,3); 
+
