@@ -1,6 +1,6 @@
 /* comment out the import assert line when running in the browser */
 //import assert from "node:assert/strict"; 
-
+//THIS IS NEW 3/1/2023
 //import {maxOfThree, sum, multiply, findLongestWord, reverseArray, reverseArrayInPlace, scoreExams, generateArray} from "./arrays.js";
 import {maxOfThree, sum, multiply} from "./arrays.js";
      
