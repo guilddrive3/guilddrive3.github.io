@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: functions.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,38 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: functions.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/* eslint-disable no-irregular-whitespace */
+//functions.js
+"use strict"; 
+//module.exports = {checkPrime, ssReverse };
+/**
+ * @param {number} num is an integer
+ * @returns {boolean} true if number is prime, else false
+ * Prime numbers have only 2 factors: 1 and themselves.  
+*/
+export function checkPrime(num) {
+    for (let i = 2; i &lt; num; i++)
+        if (num % i === 0) return false;
+    return num > 1;
+}
 
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+/**
+ * @returns {undefined} 
+ */
+export function ssReverse(){ //not implemented yet
+ }
+</code></pre>
+        </article>
+    </section>
 
 
 
