@@ -3,7 +3,7 @@
 
 //import {maxOfThree, sum, multiply, findLongestWord, reverseArray, reverseArrayInPlace, scoreExams, generateArray} from "./arrays.js";
 import {maxOfThree, sum, multiply} from "./arrays.js";
-
+     
 /* 1.	1.	Define a function maxOfThree() that takes three numbers as 
 arguments and returns the largest of them.  */
 describe("maxOfThree", function () {
