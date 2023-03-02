@@ -10,5 +10,5 @@ function write2file(content) {
     fsys.writeFile("./testWrite.txt", content, function () { });
 }
 
-const returnVal = write2file("bye bye!");
+const returnVal = write2file("goodbye bye!");
 console.log("returnVal: ", returnVal);
