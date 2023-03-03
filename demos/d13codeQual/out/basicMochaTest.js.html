@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: pow.js</title>
+    <title>JSDoc: Source: basicMochaTest.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: pow.js</h1>
+    <h1 class="page-title">Source: basicMochaTest.js</h1>
 
     
 
@@ -26,22 +26,28 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>
+            <pre class="prettyprint source linenums"><code>/* eslint-disable no-irregular-whitespace */
+//basic example of using mocha (test code in same file)
+import assert from "node:assert/strict"; 
+
 /**
  * 
- * @param {number} num is any number
- * @param {number} power is a positive integer
- * @return {number} num to power
+ * @param {number} num is a positive integer
+ * @returns {boolean} true if prime
  */
-function pow(num, power){
-
-    /* multiply num by itself power times -- so loop from 1 to power and mult num by itself */
-
- return null;
+function checkPrime(num) {
+ for (let i=2;i&lt;num;i++)
+if (num% i === 0) return false;
+    return num > 1;
 }
-
-let foo = pow(2,3); 
-
+describe("checkPrime returns true if argument is prime", function () {
+    it("37 is prime", function () {
+        assert.strictEqual(checkPrime(37), true);
+    });
+    it(" 77 is not prime", function () {
+        assert.strictEqual(checkPrime(77), false);
+    });
+});
 </code></pre>
         </article>
     </section>
