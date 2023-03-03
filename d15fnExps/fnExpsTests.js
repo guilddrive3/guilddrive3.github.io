@@ -1,17 +1,7 @@
-"use strict";
+/* comment out the import assert line when running in the browser */
+import assert from "node:assert/strict"; 
 
-/* You need the assert and function name declarations to test in node.  
-Comment these out when you send it to the browser with the index.html mocha setup page.
-*/
-const assert = require("assert");  //always need this with node
-const imports = require("./fnExps.js");  //with node need the name of your file with your functions here
-const double = imports.double;  //do this for all of the functions used in the Mocha tests
-const myMap = imports.myMap;
-const times100 = imports.times100;
-
-
-/* the following comment is needed when you run in the browser environment */
-/* global assert double times100 myMap  */
+import {double, times100, myMap} from "./fnExps.js";
 
 /* 1.	1.	Write a function, double, that takes a number and returns 2 times the number..  */
 describe("double", function () {

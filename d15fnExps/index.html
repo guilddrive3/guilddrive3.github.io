@@ -18,17 +18,17 @@
 
 
     <!-- some setup code -->
-    <script class="mocha-init">
+    <script class="mocha-init" type="module">
         mocha.setup('bdd');
         mocha.checkLeaks();
         let assert = chai.assert;
     </script>
 
     <!-- put links to your code and tests here -->
-    <script src="fnExps.js"></script>
-    <script src="fnExpsTests.js"></script>
+    <script src="fnExps.js" type="module"></script>
+    <script src="fnExpsTests.js" type="module"></script>
 
-    <script class="mocha-exec">
+    <script class="mocha-exec" type="module">
         mocha.run();
     </script>
 </body>
