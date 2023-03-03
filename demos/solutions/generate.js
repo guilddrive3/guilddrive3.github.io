@@ -9,7 +9,7 @@ console.log("expect [ [1], [2]]: ", generateArray(2, 1));
  * @param {number} rows is number of rows (or top level elements)
  * @param {*} cols is number of columns (or elements within each row)
  * @returns {Array} 2-d array with specified number of rows and cols and indices for entries
- * Note that shown indices will be computed if outer loop index is from 0 to rows -1,
+ * Shown indices will be computed if outer loop index is from 0 to rows -1,
  * and inner loop goes from 1 to cols, and add i*cols + j to get each entry
  */
 function generateArray(rows, cols){
