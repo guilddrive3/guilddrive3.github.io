@@ -1,8 +1,7 @@
-"use strict";
-/*  comment out the exports when running in the browser */
-const assert = require("assert");  //always need this with node
-const myExports = require("./app.js");  //with node need the name of your file with your functions here
-const {findTitles, findAuthors , findIDs, createBook} = myExports;  //do this for all of the functions used in the Mocha tests
+/* comment out the import assert line when running in the browser */
+//import assert from "node:assert/strict"; 
+
+import {findTitles, findAuthors , findIDs, createBook} from "./app.js";  //do this for all of the app.js functions used in the Mocha tests
 
 
 /*

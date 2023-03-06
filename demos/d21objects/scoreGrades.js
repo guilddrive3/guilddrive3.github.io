@@ -1,4 +1,3 @@
-"use strict";
 /*  Create 3 objects, student1, student2, student3
  property studentId :  s101, s102, s103 respectively
 property quizAnswers:  [1, 1, 2,4], [2, 1, 2,2], [3, 1, 3,4] respectively
