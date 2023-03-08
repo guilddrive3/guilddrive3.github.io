@@ -19,6 +19,7 @@ const manager = {
    */
   function sayHowdy() {
      //IMPLEMENT THIS
+     console.log("Hello, my name is ", this.name);
   }
   
   
