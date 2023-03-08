@@ -30,8 +30,12 @@ bank.saveTransaction = function (id, amount) {
 };
 
 bank.debit = function (id, amount) {
-    /* make sure current balance is > amount */
-//IMPLEMENT THIS
+    const customer = bank.transactionsDB.find(customer => customer.customerId === id);
+    const custBalance = this.getBalance(id);
+        /* make sure current balance is > amount */
+    if (custBalance > amount){ //post the debit, i.e., make the withdrawal
+        customer.customerTransactions.push(-amount);
+    }
 };
 
 bank.credit = function (id, amount) {
@@ -39,8 +43,15 @@ bank.credit = function (id, amount) {
 };
 
 bank.getBalance = function (id) {
-//IMPLEMENT THIS
+    /* the next line will return the first element of transactionsDB that satisfies the test in the find function */
+    const customer = bank.transactionsDB.find(customer => customer.customerId === id);
+    let totalAmt = 0;
+    for (const amt of customer.customerTransactions){
+        totalAmt = totalAmt + amt;
+    }
+    return totalAmt;
 };
+console.log("expect 55: ", bank.getBalance(3));
 
 
 
@@ -48,7 +59,12 @@ bank.getBalance = function (id) {
  * @returns {number}  returns sum of all balances
  */
 bank.bankBalance = function () {
-//IMPLEMENT THIS
+    let totalBalance = 0;
+    /* loop through the transactions DB and sum up all the individual customer balances */
+    for (const customer of this.transactionsDB){
+        totalBalance = totalBalance + this.getBalance(customer.customerId);
+    }
+    return totalBalance;
 };
 
 

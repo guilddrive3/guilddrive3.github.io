@@ -1,7 +1,7 @@
 /* comment out the import assert line when running in the browser */
 //import assert from "node:assert/strict"; 
 
-import {Calculator} from "./app.js";  //do this for all of the app.js functions used in the Mocha tests
+import {Calculator, Accumulator} from "./app.js";  //do this for all of the app.js functions used in the Mocha tests
 
 describe("calculator from constructor function", function () {
     let calc;  
