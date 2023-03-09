@@ -1,15 +1,8 @@
-"use strict";
-/* global assert    */
-/* comment out the node specific code when going to the browser*/
-const assert = require("assert");  //always need this with node
-const myExports = require("./methods.js");  //with node need the name of your file with your functions here
-const groupById = myExports.groupById;  //do this for all of the functions used in the Mocha tests
-const unique = myExports.unique;
-const filterRangeInPlace = myExports.filterRangeInPlace;
-const filterRange = myExports.filterRange;
-const Calculator = myExports.Calculator;
+/* eslint-disable id-length */
+/* comment out the import assert line when running in the browser */
+//import assert from "node:assert/strict"; 
 
-
+import { groupById, unique, filterRangeInPlace, filterRange, Calculator} from "./methods.js";
     
 
 /*
@@ -101,15 +94,15 @@ describe("groupById", function() {
 
     it("creates an object grouped by id", function() {
       let users = [
-        {id: 'john', name: "John Smith", age: 20},
-        {id: 'ann', name: "Ann Smith", age: 24},
-        {id: 'pete', name: "Pete Peterson", age: 31},
+        {id: "john", name: "John Smith", age: 20},
+        {id: "ann", name: "Ann Smith", age: 24},
+        {id: "pete", name: "Pete Peterson", age: 31},
       ];
   
       assert.deepEqual(groupById(users), {
-        john: {id: 'john', name: "John Smith", age: 20},
-        ann: {id: 'ann', name: "Ann Smith", age: 24},
-        pete: {id: 'pete', name: "Pete Peterson", age: 31},
+        john: {id: "john", name: "John Smith", age: 20},
+        ann: {id: "ann", name: "Ann Smith", age: 24},
+        pete: {id: "pete", name: "Pete Peterson", age: 31},
       });
     });
   
