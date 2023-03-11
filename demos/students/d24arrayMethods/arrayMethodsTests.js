@@ -1,6 +1,6 @@
 /* eslint-disable id-length */
 /* comment out the import assert line when running in the browser */
-import assert from "node:assert/strict"; 
+//import assert from "node:assert/strict"; 
 
 import { groupById, unique, filterRangeInPlace, filterRange, Calculator} from "./methods.js";
     

@@ -2,7 +2,7 @@
 /**
  *@returns {number} double the input
  */
-export function double(){
+ export function double(){
 }
 
 
@@ -16,8 +16,13 @@ export function times100(){
 /**
  * @returns {Array} creates a new array with function mapped to each element
  */
-export function myMap(){
+export function myMap(  ){
+
+    return null;
+
 }
+
+
 
 
 

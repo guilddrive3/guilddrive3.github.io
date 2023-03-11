@@ -1,4 +1,4 @@
-"use strict";
+
 /*
 21.	Create bank object, bank, with methods:
 a.	debit(id, amount) , adds negative amount to customer transaction list, but only if the amount is greater than the current balance.
@@ -12,7 +12,7 @@ The bank object should have a transactionsDB property, which will be an array of
 
 */
 
-const bank = {
+export const bank = {
     transactionsDB: [],
 };
 bank.transactionsDB = [
@@ -30,8 +30,12 @@ bank.saveTransaction = function (id, amount) {
 };
 
 bank.debit = function (id, amount) {
-    /* make sure current balance is > amount */
-//IMPLEMENT THIS
+    const customer = bank.transactionsDB.find(customer => customer.customerId === id);
+    const custBalance = this.getBalance(id);
+        /* make sure current balance is > amount */
+    if (custBalance > amount){ //post the debit, i.e., make the withdrawal
+        customer.customerTransactions.push(-amount);
+    }
 };
 
 bank.credit = function (id, amount) {
@@ -39,8 +43,15 @@ bank.credit = function (id, amount) {
 };
 
 bank.getBalance = function (id) {
-//IMPLEMENT THIS
+    /* the next line will return the first element of transactionsDB that satisfies the test in the find function */
+    const customer = bank.transactionsDB.find(customer => customer.customerId === id);
+    let totalAmt = 0;
+    for (const amt of customer.customerTransactions){
+        totalAmt = totalAmt + amt;
+    }
+    return totalAmt;
 };
+console.log("expect 55: ", bank.getBalance(3));
 
 
 
@@ -48,11 +59,12 @@ bank.getBalance = function (id) {
  * @returns {number}  returns sum of all balances
  */
 bank.bankBalance = function () {
-//IMPLEMENT THIS
+    let totalBalance = 0;
+    /* loop through the transactions DB and sum up all the individual customer balances */
+    for (const customer of this.transactionsDB){
+        totalBalance = totalBalance + this.getBalance(customer.customerId);
+    }
+    return totalBalance;
 };
 
 
-
-/* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-/* must be at end of file if are exporting an object so the export is after the definition */
-module.exports = {bank }; //add all of your object names here that you need for the node mocha tests

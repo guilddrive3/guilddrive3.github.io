@@ -1,7 +1,3 @@
-"use strict";
-/* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-//module.exports = { findTitles, findAuthors, findIDs , createBook}; //add all of your function names here that you need for the node mocha tests
-
 /*
 o	createBook, which will take title, author, and libraryID as inputs.  It will create a new book object and add it to the library, 
 which will be represented as a global array named libraryBooks.  createBook should return the newly created book.
@@ -20,7 +16,7 @@ let library = [
  * Event handler to display library titles sorted alphabetically
  * @returns {undefined}
  */
-function showTitles() {
+export function showTitles() {
 
     /* put all titles into an array, then sort, then join with newline and insert in textarea innerHTML */
 
@@ -38,7 +34,7 @@ function showTitles() {
  * 
  * @return {object} array holding all titles as elements
  */
-function findTitles() {
+export function findTitles() {
     let titles = [];
 
 
@@ -51,11 +47,11 @@ function findTitles() {
  * @returns {undefined} no return
  * Event handler for Add book button.  Creates and adds book to the library
  */
-function addBook() {
+export function addBook() {
     const titleElement = document.getElementById("title"); //retrieves the book title textbox element
     const title = titleElement.value;
     console.log("title is: ", title);
-    alert("title:  " + title);
+    //alert("title:  " + title);
 
     const newID = library.length + 5000;  // hack to get a unique id for now
     //finish the implementation -- get the author, create a book object, and add to the library array
@@ -65,9 +61,8 @@ function addBook() {
  * 
  * @returns {Array} find all  authors in libraryBooks and return them in alphabetically ordered array.
  */
-function findAuthors() {
+export function findAuthors() {
 //implement this
-
 
 }
 
@@ -75,17 +70,28 @@ function findAuthors() {
  * 
  * @returns {Array} find all the libraryIDs in libraryBooks and return them in an alphabetically ordered array.
 */
-function findIDs() {
+export function findIDs() {
 //implement this
 }
 
 
 /**
+ * @returns {Object} new book object
  * createBook, which will take title, author, and libraryID as inputs.  It will create a new book object and add it to the library, 
 which will be represented as a global array named libraryBooks.  createBook should return the newly created book.
  */
-function createBook(){
+export function createBook(){
 //implement this
     return null;
 }
 
+/**
+ * 
+ * @returns {undefined} 
+ */
+export function scramble(){
+    console.log("implement scramble if you have time ...");
+
+}
+
+  
