@@ -1,6 +1,7 @@
-"use strict";
 
-//create and log to the console a JSON string from john.  Then create a new instance of john, johnClone, using JSON.parse on the JSON string you created.  Is john === johnClone?
+// //create and log to the console a JSON string from john.  
+// Then create a new instance of john, johnClone, using JSON.parse on the JSON string 
+// you created.  Is john === johnClone?
 
 const john = {
     name: "John", 
