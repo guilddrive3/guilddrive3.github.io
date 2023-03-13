@@ -5,7 +5,8 @@
     "rules": {
     "strict": ["warn", "global"],
     "semi": ["warn", "always"],
-    "quotes": ["warn", "double"],
+    "quotes": ["warn", "double" , "backtick"],
+  //  "quotes": ["warn", "double"],
     "no-alert": "off",
     "no-console": "off",
     "no-debugger": "off",

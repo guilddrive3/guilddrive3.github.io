@@ -13,3 +13,5 @@ let users = [
   }
 
   console.log("indexed is: ", indexedUsers);
+
+  console.log("via reduce: ", users.reduce(function(indexedUsers, user){indexedUsers[user.id] = user; return indexedUsers}, {}));

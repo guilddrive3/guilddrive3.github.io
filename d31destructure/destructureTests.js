@@ -1,12 +1,8 @@
-"use strict";
- /* global assert topSalary   */
-/* eslint-disable quotes   */  
+/* comment out the import assert line when running in the browser */
+import assert from "node:assert/strict"; 
 
-/* comment out the node specific code when going to the browser
-const assert = require("assert");
-const myExports = require("./destructure.js");
-const topSalary = myExports.topSalary;  //do this for all of the functions used in the Mocha tests
-*/
+import { topSalary } from "./destructure.js";
+
  
     
 /* 

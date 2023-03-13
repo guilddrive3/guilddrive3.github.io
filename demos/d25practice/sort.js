@@ -14,3 +14,5 @@ function lexDescending(a, b) { //need to modify this function
 let arr = [ 1, 15, 2 ];
 arr.sort(lexDescending);
 console.log("expect [2, 15, 1]: ", arr);  
+
+
