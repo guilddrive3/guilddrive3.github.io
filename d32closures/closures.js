@@ -1,7 +1,3 @@
-"use strict"
-/* You need the module.exports when testing in node.  Comment it out when you send your file to the browser 
-*/
-module.exports = {inArray, inBetween, byField, makeArmy }; //add all of your function names here that you need for the node mocha tests
 
 
 /**
@@ -10,7 +6,7 @@ module.exports = {inArray, inBetween, byField, makeArmy }; //add all of your fun
  * @returns {Function} returns a function that tests whether its argument is in the arr
  * 
  */
-function inArray(arr) {
+export function inArray(arr) {
 
 
 
@@ -23,7 +19,7 @@ function inArray(arr) {
  * @returns {Function} returns a function that tests whether its argument is inside the range
  * 
  */
-function inBetween(low, high) {
+export function inBetween(low, high) {
 
 
 }
@@ -33,7 +29,7 @@ function inBetween(low, high) {
  * @param {String} fieldName is a property on object to be sorted
  * @returns {Function} sorting function
  */
-function byField(fieldName){
+export function byField(fieldName){
 
 }
 
@@ -41,7 +37,7 @@ function byField(fieldName){
 /**
  * @returns {Function} closure that returns it's number
  */
-function makeArmy() {
+export function makeArmy() {
 
   }
 

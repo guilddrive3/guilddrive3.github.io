@@ -44,3 +44,15 @@ function funderTotals(dailyRec, funderId) {
 console.log(`expect [{date: "01/10/2022", amount: 100}, {date: "01/11/2022", amount: 15}] :  `, funderTotals(dailyRecord, 1));
 console.log(`expect [{date: "01/11/2022", amount: 1}] :  `, funderTotals(dailyRecord, 3));
 console.log(`expect [{date: "01/10/2022", amount: 10}, {date: "01/11/2022", amount: 5}] :  `, funderTotals(dailyRecord, 2));
+
+function flatten(dailyRec) {
+    const flatArr = [];
+    for (const day of dailyRec) {
+        for (const donation of day.donations) {
+            flatArr.push({ date: day.date, id: donation.funderId, amount: donation.amount });
+        }
+    }
+    return flatArr;
+}
+
+console.log("flatten returns:  ", flatten(dailyRecord));

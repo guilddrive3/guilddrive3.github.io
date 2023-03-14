@@ -8,7 +8,7 @@ const john = {
     birthday: {"year": 2000, "month": "February", "day": 3},
     friends: [0,1,2,3]
   };
-
+  john.name = "Samantha";
   const johnJSON = JSON.stringify(john);
   console.log("JohnJSON: ", johnJSON);
 
