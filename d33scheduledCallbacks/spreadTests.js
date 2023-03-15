@@ -1,15 +1,8 @@
-"use strict";
-/* You need the assert and function name declarations to test in node.  
-Comment these out when you send it to the browser with the index.html mocha setup page. 
+/* comment out the import assert line when running in the browser */
+import assert from "node:assert/strict"; 
 
-const assert = require("assert");  //always need this with node
-const myExports = require("./spread.js");  //with node need the name of your file with your functions here
-const copyArray = myExports.copyArray;  //do this for all of the functions used in the Mocha tests
-const concat = myExports.concat; 
-const findMin = myExports.findMin; 
-const combineObjs = myExports.combineObjs; 
+import { copyArray, concat, findMin, combineObjs } from "./spread.js";
 
-*/
 
 
 /*
