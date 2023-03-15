@@ -13,7 +13,7 @@ console.log("expect 48: ", multiplyEvens(1, 6, 3, 4, 17, 2));
  * 
  * @returns {number} product of arguments that are even numbers 
  */
-function multiplyEvens(argsArray){
+function multiplyEvens(...argsArray){
 //function multiplyEvens(){
     let evensProduct = 1;
     // for (const num of arguments){
@@ -28,3 +28,6 @@ function multiplyEvens(argsArray){
 
     return evensProduct;
 }
+
+
+//console.log(multiplyEvens() );
