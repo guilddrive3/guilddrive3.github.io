@@ -1,8 +1,3 @@
-"use strict";
-
-/* You need the module.exports when testing in node.  Comment it out when you send your file to the browser.
-*/
-module.exports = { myMap, myFilter, myReduce }; //add all of your function names here that you need for the node mocha tests
 
 /**
  * 
@@ -10,7 +5,7 @@ module.exports = { myMap, myFilter, myReduce }; //add all of your function names
  * @param {*} func 
  * @returns 
  */
-function myMap(arr, func) {
+export function myMap(arr, func) {
 //IMPLEMENTATION NEEDED
 }
 
@@ -20,7 +15,7 @@ function myMap(arr, func) {
  * @param {*} func 
  * @returns 
  */
-function myFilter(arr, func) {
+export function myFilter(arr, func) {
 //IMPLEMENTATION NEEDED
 }
 
@@ -31,7 +26,7 @@ function myFilter(arr, func) {
  * @param {*} initialValue 
  * @returns 
  */
-function myReduce(arr, func, initialValue) {
+export function myReduce(arr, func, initialValue) {
     //IMPLEMENTATION NEEDED
     return  ;
     }

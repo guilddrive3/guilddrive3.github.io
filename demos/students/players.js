@@ -50,4 +50,6 @@ function findHighScores(teamStats){
  findHighScores(teamStats);
  
   console.log("expect", findHighScores(teamStats));
+
+
  
