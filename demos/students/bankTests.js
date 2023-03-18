@@ -1,13 +1,11 @@
 /* comment out the import assert line when running in the browser */
-//import assert from "node:assert/strict"; 
+import assert from "node:assert/strict"; 
 
-import { MakeBank } from "./bank.js";
-
-/* Modify your bank solution from yesterday to be a constructor function instead of an object factory.  */
+import { makeBank } from "./makeBank.js";
 
 describe("bank tests", function () {
 
-  const bank = new MakeBank();
+  const bank = makeBank();
     it("bankBalance", function () {
         assert.strictEqual(bank.bankBalance(), 85);
     });

@@ -1,7 +1,4 @@
-"use strict";
-/* global exports */
-/* exports at end of file since exporting an object, which can only be referenced after definition 
- comment out when running in browser */
+
 
 
 const Person = function() {};
@@ -15,7 +12,7 @@ Person.prototype.describe = function(){
     return this.name + ", " + this.age + " years old.";
 };
 
-const Student = function() {};
+export const Student = function() {};
 Student.prototype = new Person();
 
 Student.prototype.learn = function(subject){
@@ -31,8 +28,5 @@ console.log(john.learn("Inheritance"));
 
 [teacher's name] is now teaching [subject]
 */
+export const Teacher = null;
 
-
-
-/* comment out when running in browser */
-module.exports = {Teacher, Student}; 

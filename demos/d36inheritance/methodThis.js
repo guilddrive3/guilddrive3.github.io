@@ -18,7 +18,7 @@ let animal = {
   };
   
   // modifies rabbit.isSleeping
-  rabbit.sleep();
+  //rabbit.sleep();
   animal.sleep();
   
   console.log(rabbit.isSleeping); // true
