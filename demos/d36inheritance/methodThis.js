@@ -1,4 +1,3 @@
-"use strict";
 
 // animal has methods
 let animal = {

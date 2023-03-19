@@ -1,5 +1,5 @@
 /* comment out the import assert line when running in the browser */
-//import assert from "node:assert/strict"; 
+import assert from "node:assert/strict"; 
 
 import { Student, Teacher } from "./teacher.js";
 
