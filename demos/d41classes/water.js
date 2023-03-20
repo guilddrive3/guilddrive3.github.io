@@ -2,7 +2,7 @@
 
 class CoffeeMachine {
 
-    #waterAmount = 0;
+    #waterAmount = 0;  //had to add this to .eslintrc.json "parserOptions" : {..., "ecmaVersion": 2022}
   
     getWaterAmount() {
       return this.#waterAmount;

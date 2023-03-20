@@ -1,4 +1,3 @@
-"use strict";
 
 /**
  * 
@@ -9,7 +8,7 @@ function User(name) {
     this.name = name;
   }
   
-  User.prototype.sayHi = function() {
+  User.prototype.sayHi = function fooHi() {
     console.log(this.name);
   };
   
@@ -20,5 +19,5 @@ function User(name) {
   // Usage 
   let user = new User("John");
   user.sayHi();
-  console.log(JSON.stringify(User.prototype));
+  console.log(User.prototype);
   

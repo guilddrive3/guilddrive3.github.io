@@ -1,4 +1,4 @@
-"use strict";
+
 
 /**
  * Illustrates that arrow function will work for method if it is used in the constructor function

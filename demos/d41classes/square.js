@@ -1,25 +1,21 @@
-"use strict";
 /*eslint-disable */
 
 function area() { return this.side * this.side }
 const square1 =  //OBJECT LITERAL
 {
-    side: 5
+
 };
-square1.__proto__.area = area;
+
 
 function Square(side) { //CONSTRUCTOR FUNCTION
-    this.side = side;
+
  }
- Square.prototype.area = area;
+
 
 
 
 class Square2 { //CLASS SYNTAX
-    constructor(side){
-        this.side = side;
-    }
-    area() { return this.side * this.side };
+
  }
 
 

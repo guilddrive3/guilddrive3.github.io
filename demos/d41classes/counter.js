@@ -1,4 +1,3 @@
-"use strict";
 
 /*
   increment or decrement or view */

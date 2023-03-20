@@ -1,5 +1,3 @@
-"use strict";
-/* global exports */
 
 
 /**
@@ -7,7 +5,7 @@
  * 
  * Provides the basic functionality that every account should have
  */
-class Account {
+export class Account {
     /**
      * Constructor for creating a new Account object
      * 
@@ -84,7 +82,3 @@ class Account {
         return ""; // does nothing
     }
 }
-
-/* You need the module.exports when testing in node.  Comment it out when you send your file to the browser 
-*/
-exports.Account = Account;

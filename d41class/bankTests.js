@@ -1,19 +1,11 @@
-"use strict";
-/* global require describe it assert  Account SavingsAccount CheckingAccount Bank*/
+/* comment out the import assert line when running in the browser */
+import assert from "node:assert/strict"; 
 
-/* You need the assert and function name declarations to test in node.  
-Comment these out when you send it to the browser with the index.html mocha setup page.   */
+import { Account } from "./account.js";
+import { Bank } from "./bank.js";
+import { CheckingAccount } from "./checkingaccount.js";
+import { SavingsAccount } from "./savingsaccount.js";
 
-const assert = require("assert");  //always need this with node
-
-const acc = require("./account.js");//with node need the name of your file with your functions here
-const Account = acc.Account;  //do this for all of the functions used in the Mocha tests
-const bnk = require("./bank.js");
-const Bank = bnk.Bank;
-const chk = require("./checkingaccount.js");
-const CheckingAccount = chk.CheckingAccount;
-const sav = require("./savingsaccount.js");
-const SavingsAccount = sav.SavingsAccount;  
 
 describe("Account class", () => {
     let account = undefined;
