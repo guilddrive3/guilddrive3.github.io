@@ -1,5 +1,5 @@
 /* comment out the import assert line when running in the browser */
-import assert from "node:assert/strict"; 
+import assert from "node:assert/strict";
 
 import { Account } from "./account.js";
 import { Bank } from "./bank.js";
@@ -71,8 +71,8 @@ describe("Account class", () => {
         });
     });
 
-    describe("endOfMonth() method", ()=>{
-        it("returns an empty string", ()=>{
+    describe("endOfMonth() method", () => {
+        it("returns an empty string", () => {
             assert.equal(account.endOfMonth(), "");
         });
     });
@@ -114,8 +114,8 @@ describe("SavingsAccount", () => {
         });
     });
 
-    describe("endOfMonth() method", ()=>{
-        it("returns a string saying that interest was added", ()=>{
+    describe("endOfMonth() method", () => {
+        it("returns a string saying that interest was added", () => {
             savings.withdraw(5);
             assert.equal(savings.endOfMonth(), "Interest added SavingsAccount 1: balance: 105 interest: 5");
         });
@@ -165,11 +165,11 @@ describe("CheckingAccount", () => {
             assert.equal("CheckingAccount 1: balance: -200 overdraft limit: 250", checking.toString());
         });
     });
-    describe("endOfMonth() method", ()=>{
-        it("returns a warning string when the balance is below zero", ()=>{
+    describe("endOfMonth() method", () => {
+        it("returns a warning string when the balance is below zero", () => {
             assert.equal(checking.endOfMonth(), "Warning, low balance CheckingAccount 1: balance: -200 overdraft limit: 250");
         });
-        it("returns an empty string when balance above zero", ()=>{
+        it("returns an empty string when balance above zero", () => {
             checking.deposit(1000);
             assert.equal(checking.endOfMonth(), "");
         });
@@ -224,8 +224,8 @@ describe("Bank Class", () => {
             assert.equal(bank.accountReport(), "SavingsAccount 2: balance: 0 interest: 2.5\nCheckingAccount 3: balance: 0 overdraft limit: 500\n");
         });
     });
-    describe("endOfMonth()", ()=>{
-        it("returns a string with actions related to the accounts", ()=>{
+    describe("endOfMonth()", () => {
+        it("returns a string with actions related to the accounts", () => {
             bank._accounts[0].deposit(100);
             bank._accounts[1].withdraw(100);
             bank.addAccount();

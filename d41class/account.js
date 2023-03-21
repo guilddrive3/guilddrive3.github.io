@@ -6,6 +6,7 @@
  * Provides the basic functionality that every account should have
  */
 export class Account {
+
     /**
      * Constructor for creating a new Account object
      * 

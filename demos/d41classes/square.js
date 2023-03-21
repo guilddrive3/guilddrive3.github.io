@@ -1,21 +1,29 @@
-/*eslint-disable */
 
-function area() { return this.side * this.side }
-const square1 =  //OBJECT LITERAL
-{
+function foo(){ return null;}
 
+
+/**
+ * 
+ * @returns{number} area of the square object
+ */
+function area() { return this.side * this.side; }
+const square1 = {
+    side: 5, 
+   // area: area
 };
 
+square1.__proto__ = {area: area};
 
-function Square(side) { //CONSTRUCTOR FUNCTION
+function Square(side) {this.side = side;}
 
- }
-
-
+Square.prototype = { area: area }; 
 
 
-class Square2 { //CLASS SYNTAX
-
+class Square2 {
+    constructor(side){
+        this.side = side;
+    }
+    area(){ return this.side * this.side; }
  }
 
 
