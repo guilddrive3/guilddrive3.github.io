@@ -20,4 +20,4 @@ function ask(question, yes, no) {
     console.log( "You canceled the execution." );
   }
   ask(0, showOk, showCancel);
-  
+}

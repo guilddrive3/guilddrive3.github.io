@@ -1,7 +1,7 @@
 /* comment out the import assert line when running in the browser */
-import assert from "node:assert/strict"; 
+import {strict as assert} from "node:assert/strict"; 
 
-import {double, times100, myMap} from "./fnExps.js";
+import {double, times100, myMap} from "../src/fnExps.js";
 
 /* 1.	1.	Write a function, double, that takes a number and returns 2 times the number..  */
 describe("double", function () {

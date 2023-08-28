@@ -26,8 +26,8 @@ export function showTitles() {
     titles.sort();
     const titleString = titles.join("\n");
 
-    let textArea = document.getElementById("displayArea");
-    textArea.innerHTML = titleString;
+    let textArea: HTMLInputElement | null = document.getElementById("displayArea") as HTMLInputElement | null;
+    if (textArea) { textArea.innerHTML = titleString;  }
 }
 
 /**
@@ -43,13 +43,15 @@ export function findTitles() {
     return titles;
 }
 
+
 /**
  * @returns {undefined} no return
  * Event handler for Add book button.  Creates and adds book to the library
  */
 export function addBook() {
-    const titleElement = document.getElementById("title"); //retrieves the book title textbox element
-    const title = titleElement.value;
+    const titleElement : HTMLInputElement | null = document.getElementById("title") as HTMLInputElement | null;
+
+    const title = titleElement?.value;  //? is a guard operator that checks if titleElement is null or not
     console.log("title is: ", title);
     //alert("title:  " + title);
 
