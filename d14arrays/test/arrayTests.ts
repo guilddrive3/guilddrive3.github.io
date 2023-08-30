@@ -1,8 +1,8 @@
-/* comment out the import assert line when running in the browser */
-//import assert from "node:assert/strict"; 
+/* comment out the import assert line (in /dist/test js mocha file) when running in the browser */
+import { assert } from "chai"
 
 //import {maxOfThree, sum, multiply, findLongestWord, reverseArray, reverseArrayInPlace, scoreExams, generateArray} from "./arrays.js";
-import {maxOfThree, sum, multiply} from "./arrays.js";
+import {maxOfThree, sum, multiply, findLongestWord, generateArray} from "../src/app.js";
      
 /* 1.	1.	Define a function maxOfThree() that takes three numbers as 
 arguments and returns the largest of them.  */
@@ -58,23 +58,23 @@ describe("sum and multiply", function () {
 });
 
 
-// /*
-// 3.	Write a function findLongestWord() that takes an array of words and returns the length of the longest one. 
-// */
-// describe("findLongestWord", function () {
-//     it("tests longest", function () {
-//         assert.strictEqual(findLongestWord(["this", "is", "a", "test", "longest"]), 7);
-//     });
-//     it("tests longest with spaces", function () {
-//         assert.strictEqual(findLongestWord(["this", "is", "a word with spaces", "test", "longest"]), 18);
-//     });
-//     it("tests longest with equal length words", function () {
-//         assert.strictEqual(findLongestWord(["is", "is", "is", "is", "is"]), 2);
-//     });
-//     it("tests longest with some words equal length", function () {
-//         assert.strictEqual(findLongestWord(["this", "is", "this", "is", "is"]), 4);
-//     });
-// });
+/*
+3.	Write a function findLongestWord() that takes an array of words and returns the length of the longest one. 
+*/
+describe("findLongestWord", function () {
+    it("tests longest", function () {
+        assert.strictEqual(findLongestWord(["this", "is", "a", "test", "longest"]), 7);
+    });
+    it("tests longest with spaces", function () {
+        assert.strictEqual(findLongestWord(["this", "is", "a word with spaces", "test", "longest"]), 18);
+    });
+    it("tests longest with equal length words", function () {
+        assert.strictEqual(findLongestWord(["is", "is", "is", "is", "is"]), 2);
+    });
+    it("tests longest with some words equal length", function () {
+        assert.strictEqual(findLongestWord(["this", "is", "this", "is", "is"]), 4);
+    });
+});
 
 
 // /*
@@ -131,18 +131,18 @@ describe("sum and multiply", function () {
 //     });
 // });
 
-// /* 6. Write a function that takes two integers as inputs and returns a 2-dimensional array containing sequential numbers across each row as follows: */
-// describe("generate array", function () {
-//     const expected33 = [ [1, 2, 3], [4, 5, 6], [7, 8, 9]];
-//     const expected23 = [ [1, 2, 3], [4, 5, 6]];
-//     const expected21 = [ [1], [2]];
-//     it("expected33", function () {
-//         assert.deepEqual(generateArray(3,3), expected33);
-//     });
-//     it("expected23", function () {
-//         assert.deepEqual(generateArray(2,3), expected23);
-//     });
-//     it("expected21", function () {
-//         assert.deepEqual(generateArray(2, 1), expected21);
-//     });
-// });
+/* 6. Write a function that takes two integers as inputs and returns a 2-dimensional array containing sequential numbers across each row as follows: */
+describe("generate array", function () {
+    const expected33 = [ [1, 2, 3], [4, 5, 6], [7, 8, 9]];
+    const expected23 = [ [1, 2, 3], [4, 5, 6]];
+    const expected21 = [ [1], [2]];
+    it("expected33", function () {
+        assert.deepEqual(generateArray(3,3), expected33);
+    });
+    it("expected23", function () {
+        assert.deepEqual(generateArray(2,3), expected23);
+    });
+    it("expected21", function () {
+        assert.deepEqual(generateArray(2, 1), expected21);
+    });
+});
