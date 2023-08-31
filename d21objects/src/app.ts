@@ -6,7 +6,13 @@ o	findAuthors, which will find all the authors in libraryBooks and return them i
 o	findIDs, which will find all the libraryIDs in libraryBooks and return them in an alphabetically ordered array.
 */
 
-let library = [
+interface Book  {
+    title: string,
+    author: string,
+    libraryID: number
+}
+
+let library: Book[] = [
     { title: "The Road Ahead", author: "Bill Gates", libraryID: 1254 },
     { title: "Walter Isaacson", author: "Steve Jobs", libraryID: 4264 },
     { title: "Mockingjay: The Final Book of The Hunger Games", author: "Suzanne Collins", libraryID: 3245 }
@@ -82,9 +88,9 @@ export function findIDs() {
  * createBook, which will take title, author, and libraryID as inputs.  It will create a new book object and add it to the library, 
 which will be represented as a global array named libraryBooks.  createBook should return the newly created book.
  */
-export function createBook(){
+export function createBook(title: string, author: string, libraryID: number): Book{
 //implement this
-    return null;
+    return {title: "no title", author: "no author", libraryID: 0};
 }
 
 /**
