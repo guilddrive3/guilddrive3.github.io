@@ -2,7 +2,9 @@
     "type": "module",
     "scripts": {
         "app": "ts-node ./src/app.ts",
-        "test": "mocha"
+        "test": "mocha",
+        "compile": "npx tsc",
+        "browser": "npx http-server . -p 8080 -o"
     },
     "devDependencies": {
         "@types/mocha": "^10.0.1",
