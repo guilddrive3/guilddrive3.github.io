@@ -4,7 +4,7 @@
         "app": "ts-node ./src/app.ts",
         "test": "mocha",
         "compile": "npx tsc",
-        "browser": "npx http-server . -p 8080 -o"
+        "browser": "npx http-server . -p 8080 -o index.html"
     },
     "devDependencies": {
         "@types/mocha": "^10.0.1",

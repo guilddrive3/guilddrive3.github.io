@@ -1,4 +1,3 @@
-/* eslint-disable id-length */
 
 /**
  * 
@@ -6,7 +5,7 @@
 @param {number} increment is amount to add when accumulate called
  * @returns {Accumulator} constructor function
  */
-export function Accumulator(initialValue, increment){
+export function Accumulator(initialValue: number, increment: number){
    //1. compiler creates this = {}
    //2. we create and set properties on the this object
    this.currentValue = initialValue;
