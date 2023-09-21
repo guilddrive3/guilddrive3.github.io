@@ -1,14 +1,14 @@
 
 
 export const calculator = {
-    a: 0,
-    b: 0,
-    setValues: function(aValue, bValue){
-        this.a = aValue;
-        this.b = bValue;
+    operand1: 0,
+    operand2: 0,
+    setValues: function(aValue: number, bValue: number){
+        this.operand1 = aValue;
+        this.operand2 = bValue;
     },
-    sum: function(){return this.a + this.b;},
-    mul: function(){return this.a * this.b;}
+    sum: function(){return this.operand1 + this.operand2;},
+    mul: function(){return this.operand1 * this.operand2;}
 
 };  // implement this
 
