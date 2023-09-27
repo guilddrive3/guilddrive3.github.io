@@ -1,7 +1,7 @@
 /* comment out the import assert line when running in the browser */
 import assert from "node:assert/strict"; 
 
-import { ucFirst, getMaxSubSum, truncate , camelize, checkSpam, extractCurrencyValue} from "./app.js";
+import { ucFirst, getMaxSubSum, truncate , camelize, checkSpam, extractCurrencyValue} from "../src/app.js";
 
  
 /* eslint-disable quotes */
