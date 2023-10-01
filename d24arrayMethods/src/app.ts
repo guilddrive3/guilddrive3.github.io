@@ -1,3 +1,10 @@
+let lengths = ["Bilbo", "Gandalf", "Nazgul"].map(function(name, index){return index + ": " + name.slice(0,3); });
+console.log(lengths); // [5,7,6]
+
+//modify so that it logs array with index: item.length instead of just item.length
+console.log("expect [0: 5, 1: 7, 2: 6]", lengths); 
+
+
 //reduce the array to the product of the numbers (“expect 120”)
 //reduce the array to the max of the numbers (“expect 5”)
 
@@ -11,7 +18,6 @@ let maxarrow = arr.reduce( (max, current) => current > max ? current : max, 0);
 
 let prodLast = arr.reduce(last3, 1);
 
-// eslint-disable-next-line require-jsdoc
 function last3(product, current,index, arr){
     /* only return new mult if index is one of last 3 */
     if (index >= arr.length - 3){
@@ -28,6 +34,3 @@ console.log("expect 5: ", max2);
 console.log("expect 5: ", maxarrow);
 
 console.log("expect 60: ", prodLast);
-
-
-
