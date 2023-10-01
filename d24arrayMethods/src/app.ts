@@ -18,7 +18,7 @@ let maxarrow = arr.reduce( (max, current) => current > max ? current : max, 0);
 
 let prodLast = arr.reduce(last3, 1);
 
-function last3(product, current,index, arr){
+function last3(product: number, current: number,index: number, arr: number[]): number {
     /* only return new mult if index is one of last 3 */
     if (index >= arr.length - 3){
         return product * current;
