@@ -1,8 +1,7 @@
 /* comment out the import assert line (in /dist/test js mocha file) when running in the browser */
 import { assert } from "chai";
 
-import { groupById, unique, filterRangeInPlace, filterRange, Calculator} from "../src/methods.js";
-    
+import { filterRangeInPlace, filterRange, calculator, unique, groupById, User, map2fullName, sortByAge, findOldest, getAverageAge} from "../src/methods.js";
 
 /*
 Write a function filterRange(arr, a, b) that gets an array arr, looks for elements with values higher or equal to a and lower or equal to b and return a result as an array.
@@ -19,6 +18,7 @@ describe("filterRange", function () {
     it("doesn't change the array", function () {
         let arr = [5, 3, 8, 1];
         let filtered = filterRange(arr, 1, 4);
+        assert.deepEqual(filtered, [3, 1]);
         assert.deepEqual(arr, [5, 3, 8, 1]);
     });
 });
@@ -41,16 +41,10 @@ describe("filterRangeInPlace", function () {
 });
 
 /* 
-Create a constructor function Calculator that creates “extendable” calculator objects.
-
+Create an “extendable” calculator object.
 The task consists of two parts.  (see https://javascript.info/array-methods)
 */
-describe("Calculator", function () {
-    let calculator;
-
-    before(function () {
-        calculator = new Calculator();
-    });
+describe("extendable calculator", function () {
 
     it("calculate(12 + 34) = 46", function () {
         assert.equal(calculator.calculate("12 + 34"), 46);
@@ -71,7 +65,7 @@ describe("Calculator", function () {
     });
 });
 
-/* Create a function unique(arr) that should return an array with unique items of arr. */
+/* Create a function unique(arr: string[]): string[] that should return an array with unique items of arr. */
 describe("unique", function () {
     let strings = ["Hare", "Krishna", "Hare", "Krishna",
         "Krishna", "Krishna", "Hare", "Hare", ":-O"];
@@ -92,7 +86,7 @@ Please use array .reduce method in the solution.
 describe("groupById", function() {
 
     it("creates an object grouped by id", function() {
-      let users = [
+      let users: User[] = [
         {id: "john", name: "John Smith", age: 20},
         {id: "ann", name: "Ann Smith", age: 24},
         {id: "pete", name: "Pete Peterson", age: 31},
@@ -106,7 +100,58 @@ describe("groupById", function() {
     });
   
     it("works with an empty array", function() {
-      const users = [];
+      const users: User[] = [];
       assert.deepEqual(groupById(users), {});
     });
   });
+
+    /* write mocha test for map2fullName */
+    describe("map2fullName", function() {
+        let john = { name: "John", surname: "Smith", id: 1 };
+        let pete = { name: "Pete", surname: "Hunt", id: 2 };
+        let mary = { name: "Mary", surname: "Key", id: 3 };
+        let users = [ john, pete, mary ];
+
+        it("returns the full name", function() {
+            assert.deepEqual(map2fullName(users), [
+                { fullName: "John Smith", id: 1 },
+                { fullName: "Pete Hunt", id: 2 },
+                { fullName: "Mary Key", id: 3 }
+            ]);
+        });
+    });
+
+    /* write mocha test for sortByAge */
+    describe("sortByAge", function() {
+        it("sorts in place by age", function() {
+            const john = { name: "John", age: 25 , id: "1"};
+            const pete = { name: "Pete", age: 30 , id: "2"};
+            const mary = { name: "Mary", age: 28, id: "3" };
+            const users: User[] = [ pete, john, mary ];
+            sortByAge(users);
+            assert.deepEqual(users, [john, mary, pete]);
+        });
+    });
+
+
+    /* write mocha test to find oldest user */
+    describe("findOldest", function() {
+        it("finds the oldest user", function() {
+            const john = { name: "John", age: 25 , id: "1"};
+            const pete = { name: "Pete", age: 30 , id: "2"};
+            const mary = { name: "Mary", age: 28, id: "3" };
+            const users: User[] = [ pete, john, mary ];
+            assert.deepEqual(findOldest(users), pete);
+        });
+    });
+
+    /* write mocha test to get average age */
+    describe("getAverageAge", function() {
+        it("gets the average age", function() {
+            const john = { name: "John", age: 25 , id: "1"};
+            const pete = { name: "Pete", age: 30 , id: "2"};
+            const mary = { name: "Mary", age: 28, id: "3" };
+            const users: User[] = [ pete, john, mary ];
+            assert.equal(getAverageAge(users).toFixed(3) , "27.667");
+        });
+    });
