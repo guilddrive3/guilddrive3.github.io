@@ -43,12 +43,12 @@ export interface User {
 }
 
 export function groupById(users: User[]): { [key: string]: User } {
-    // declare result to be an object with string keys and User values
-    const result: { [key: string]: User } = {};  
+    // declare usersById to be an object with string keys and User values
+    const usersById: { [key: string]: User } = {};  
     // FURTHER IMPLEMENTATION REQUIRED HERE
 
 
-    return result;
+    return usersById;
 }
 
 interface SurnameUser {
