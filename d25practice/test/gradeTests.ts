@@ -1,7 +1,7 @@
-/* comment out the import assert line when running in the browser */
-import assert from "node:assert/strict"; 
+/* comment out the import assert line (in /dist/test js mocha file) when running in the browser */
+import { assert } from "chai";
 
-import { quiz } from "./grades.js";
+import { quiz } from "../src/grades.js";
 
 
 describe("grades from quiz", function () {
