@@ -75,7 +75,7 @@ quiz.getAverage = function () {
 
 };
 
-/**
+/**  
  * 
  * @param {Array} stuAnswers array of student answer objects
  * @param {Array} key array of answer objects

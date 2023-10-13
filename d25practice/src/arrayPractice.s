@@ -1,4 +1,8 @@
 
+export type Person = {
+    name: string,
+    age: number
+}
 
 export function doubleNums(arr){
 return arr.map(num => num * 2);
