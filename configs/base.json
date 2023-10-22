@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "target": "es2022", //sets JavaScript emitted code to 2022 version 
+      "module": "NodeNext",  //sets module code emitted to es modules
+      "moduleResolution": "NodeNext", //sets module resolution to nodejs resolution
+      "noImplicitAny": true,
+      "noImplicitReturns": true,
+      "strict": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true
+    },
+    "ts-node": {
+      "esm": true, // «———— enable ESM for ts-node  
+    }
+  }
