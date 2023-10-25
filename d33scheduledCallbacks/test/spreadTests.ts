@@ -1,7 +1,7 @@
-/* comment out the import assert line when running in the browser */
-import assert from "node:assert/strict"; 
+/* comment out the import assert line (in /dist/test js mocha file) when running in the browser */
+import { assert } from "chai";
 
-import { copyArray, concat, findMin, combineObjs } from "./spread.js";
+import { copyArray, concat, findMin, findProduct } from "../src/spread.js";
 
 
 
@@ -12,7 +12,6 @@ c)	Concatenate an array and a new array element
 d)	Use an array as arguments
 e)	Use Math.min and Math.max
 f)	Combine several objects into a single object
-
 */
 
 
@@ -39,10 +38,12 @@ describe("spread operator tests", function () {
         assert.strictEqual(findMin(...arr2), 0);
     });
 
-    it("tests combine objects", function () {
-        const obj1 = {prop1: 1, prop2: 2};
-        const obj2 = {prop3: 1, prop4: 2};
-
-        assert.deepEqual(combineObjs(obj1, obj2), {prop1: 1, prop2: 2, prop3: 1, prop4: 2});
+    it("tests rest operator in function call", function () {
+        const arr1 = [1, 2, 3];
+        const arr2 = [1,2,3,4,5];
+        assert.strictEqual(findProduct(1,2), 2);
+        assert.strictEqual(findProduct(...arr1), 6);
+        assert.strictEqual(findProduct(...arr2), 120);
     });
+
 });

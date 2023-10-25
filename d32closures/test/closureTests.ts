@@ -2,6 +2,7 @@
 import { assert } from "chai";
 
 import { inArray, inBetween, makeArmy } from "../src/closures.js";
+import { createShoppingCart } from "../src/shoppingCart.js";
 
 
 
@@ -56,4 +57,22 @@ describe("army", function () {
     assert.strictEqual(shooter5, 5);
   });
 
+});
+
+describe("Shopping Cart", function () {
+
+  const myCart = createShoppingCart();
+  myCart.addItem('Shirt', 20);
+  myCart.addItem('Jeans', 50);
+
+  it("getTotal", function () {
+    assert.strictEqual(myCart.getTotal(), 70);
+  });
+
+
+  it("remove items", function () {
+    myCart.removeItem('Shirt');
+    myCart.removeItem('Shoes');
+    assert.strictEqual(myCart.getTotal(), 50);
+  });
 });
