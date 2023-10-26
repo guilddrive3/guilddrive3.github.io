@@ -1,5 +1,5 @@
 
-export   { sumTo, factorial, fibonacci, outputList, outputListLoop, reverseList, reverseListLoop}
+export   { sumTo, factorial, fibonacci, outputList, outputListLoop, reverseList, reverseListLoop, TreeNode, sumTreeValues}
 
 function sumTo(n: number): number {
     if (n == 1) return 1;
@@ -9,4 +9,11 @@ function sumTo(n: number): number {
 function factorial(n: number): number {
 
     return n;
+}
+
+
+type TreeNode = {
+    value: number;
+    left: TreeNode | null;
+    right: TreeNode | null;
 }
