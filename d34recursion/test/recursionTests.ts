@@ -50,6 +50,7 @@ describe("binary tree recursion", function () {
     const tn4 = { value: 4, left: null, right: null };
     const tn2 = { value: 2, left: tn4, right: tn5 };
     const binaryTree = { value: 1, left: tn2, right: tn3 };
+    
     it("tests sum values of binary tree", function () {
         assert.strictEqual(sumTreeValues(binaryTree), 15);
     });
