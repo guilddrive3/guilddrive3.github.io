@@ -1,17 +1,23 @@
 "use strict";
+let x = 1;
+let y = 2;
+let z = 3;
 
-const x=false;
-const y = x || 5;
-console.log(y);
+console.log(x && y && z); // 3
 
-const foo=true;
-const z = foo || 10;
-console.log(z);
+x = false;
+console.log(x && y && z); // false
 
- const bar = foo && 5;
-console.log(bar);
+x = 0;
+console.log(x && y && z); // 0
 
-const zero=0;
-const conj2 = zero && 10;
-console.log(conj2);
+x = 1;
+console.log(x || y || z); // 1
+
+x = false;
+y = 0;
+z = null;
+console.log(x || y || z); // null
+
+console.log(x ?? y ?? z); // false
 
