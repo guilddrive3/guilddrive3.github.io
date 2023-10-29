@@ -1,6 +1,7 @@
 "use strict";
+import PromptSync from "prompt-sync";
+const prompt = PromptSync();
 
-let prompt = require("prompt-sync")();
 let userInput = prompt("Please enter a fraction number: ");
 console.log("---------------visual separator---------------");
 console.log(userInput);
