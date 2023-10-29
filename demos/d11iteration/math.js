@@ -9,6 +9,6 @@ console.log(Math.round(5.6));
 console.log(Math.floor(5.9));
 console.log(Math.ceil(5.2));
 console.log(Math.min(1,-1,4,3.-0.2,-9,9));
-console.log(Math.random());
+console.log("Math.random is: ", Math.random());
 
 console.log("PI IS: ", Math.PI);
