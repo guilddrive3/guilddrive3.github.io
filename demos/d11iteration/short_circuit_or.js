@@ -21,3 +21,5 @@ console.log(x || y || z); // null
 
 console.log(x ?? y ?? z); // false
 
+let age = (0 ?? 10)
+
