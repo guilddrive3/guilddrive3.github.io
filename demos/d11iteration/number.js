@@ -8,4 +8,4 @@ let num = Number(str); // becomes a number 123.33
 num = parseFloat(str); // becomes a number 123.33
 num = parseInt(str); // becomes a number 123
 console.log( +str); // becomes a number 123.33
-//test update
+//another test update
