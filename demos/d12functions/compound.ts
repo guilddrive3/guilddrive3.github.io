@@ -15,7 +15,7 @@ processing:
    -- calculate interest for that month and add to balance
  - report the final balance
  */
-function compoundInterest(deposit, rate, years) {
+function compoundInterest(deposit: number, rate: number, years: number) {
     const monthlyRate = rate / 12 / 100;
     const numPayments = years * 12; 
     let balance = deposit;
