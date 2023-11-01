@@ -5,6 +5,8 @@
      },
     "devDependencies": {
         "@types/node": "^20.5.0",
-        "ts-node": "^10.9.1"
+        "ts-node": "^10.9.1",
+        "@types/prompt-sync": "^4.2.2",
+        "prompt-sync": "^4.2.0"
       }
   }

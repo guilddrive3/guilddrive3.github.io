@@ -5,6 +5,7 @@
         "noImplicitAny": true,
         "noImplicitReturns": true,
         "strict": true,
+        "esModuleInterop": true,
     },
     "include": [
         "*.ts",
