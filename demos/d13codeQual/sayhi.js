@@ -25,10 +25,17 @@
  * @param {String} name is any string
  * @returns {String} bye plus name
  */
-function sayHi(name) {
-  console.log("Hi " , name);
- return "Bye " + name;
-}
-const sayHiReturn = console.log(sayHi() );
+// function sayHi(name) {
+//   console.log("Hi " , name);
+//  return "Bye " + name;
+// }
+// const sayHiReturn = console.log(sayHi() );
 
-console.log("sayHiReturn is: " , sayHiReturn);
+// console.log("sayHiReturn is: " , sayHiReturn);
+
+//"use strict";
+const greeting = 'hello';
+console.log(greeting);
+greetng  = 'goodbye';
+console.log (greeting);
+
