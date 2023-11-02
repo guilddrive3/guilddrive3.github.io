@@ -1,7 +1,7 @@
-import { compound } from "./compound.js"
+//import { compound } from "./compound.js"
 import  promptSync from "prompt-sync";
 
-console.log("compound returns 0: ", compound(100,100));
+//console.log("compound returns 0: ", compound(100,100));
 
 
 
