@@ -6,7 +6,7 @@ o	findAuthors, which will find all the authors in libraryBooks and return them i
 o	findIDs, which will find all the libraryIDs in libraryBooks and return them in an alphabetically ordered array.
 */
 
-export interface Book {
+export type Book = {
     title: string,
     author: string,
     libraryID: number

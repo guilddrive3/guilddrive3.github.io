@@ -1,5 +1,5 @@
 
-export interface StudentQuiz {
+export type StudentQuiz = {
     studentId: number,
     quizAnswers: number[]
 }
