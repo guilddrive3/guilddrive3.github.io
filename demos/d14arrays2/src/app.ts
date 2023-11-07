@@ -28,6 +28,8 @@ const matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
 function sumMatrix(arr: number[][]) {
     //implement this
     let total = 0;
+
+
     for (const row of arr) {
         for (const num of row) {
             total += num;
