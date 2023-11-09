@@ -1,5 +1,5 @@
 {
-  "extends": "../configs/base.json",
+  "extends": "../../configs/base.json",
 
   "compilerOptions": {
   "outDir": "./dist"
