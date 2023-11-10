@@ -4,5 +4,5 @@
   "compilerOptions": {
   "outDir": "./dist"
 },
-"include": ["*.ts", "./src/*.ts" , "./test/*.ts"],
+"include": ["*.ts", "./src/*.ts" , "./test/*.ts", "../d24arrayMethods/test/gradeTests.ts", "../d24arrayMethods/src/grades.ts"],
 }

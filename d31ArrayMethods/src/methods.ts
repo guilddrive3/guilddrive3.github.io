@@ -16,7 +16,7 @@ export function filterRangeInPlace(arr: number[], a: number, b: number): void {
 
 }
 
-interface Calculator {
+type Calculator = {
     methods: { [key: string]: (a: number, b: number) => number };
     calculate: (str: string) => number;
     addMethod: (name: string, func: (a: number, b: number) => number) => void;
@@ -36,7 +36,7 @@ export function unique(arr: string[]): string[] {
     return [];
 }
 
-export interface User {
+export type User ={
     id: string;
     name: string;
     age: number;
@@ -51,13 +51,13 @@ export function groupById(users: User[]): { [key: string]: User } {
     return usersById;
 }
 
-interface SurnameUser {
+type SurnameUser = {
     name: string;
     surname: string;
     id: number;
 }
 
-interface FullNameUser {
+type FullNameUser = {
     fullName: string;
     id: number;
 }   
