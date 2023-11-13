@@ -2,11 +2,11 @@
 import { assert } from "chai";
 
 import { firstLast, replaceEnds, higho, square, absVal, } from "../src/exam.js";
-import { calculateDailyTotalDuration,getAllSessions } from "../src/exam.js";
+import { calculateDailyTotalDuration, getAllSessions, getAllSessionsForUser, getAllDurations } from "../src/exam.js";
 
 
 describe("exam2 coding", function () {
-
+    //Implement the firstLast function.  Use the appropriate array method in your function. 
     it("firstLast", function () {
         const names = ["Fred Smith", "Carl Lindstrom"];
         const output = [{ firstName: 'Fred', lastName: 'Smith' }, { firstName: 'Carl', lastName: 'Lindstrom' }]
@@ -24,7 +24,7 @@ describe("exam2 coding", function () {
         assert.deepEqual(replaceEnds(arr, 6, 1, 2, 4), result);
         assert.deepEqual(arr, [5, 4, 3, 2, 1, 0]); //original array is unchanged
     });
-    it("replaceEnds 0 100", function () {
+    it("replaceEnds 1093287", function () {
         //Use slice and splice to write TypeScript code for the replaceEnds function.  replaceEnds should be a pure function.
         //first two number arguments replace the first and second elements of the array, last two number arguments replace the 
         //last two elements of the array
@@ -79,9 +79,20 @@ describe("fitness tracking", function () {
     });
 
     //Write a function getAllSessions that will use the concat method to return an array with all  the sessions in the dailyRecord.
-    const allSessions = [session1, session2, session3, session4 , session5];
-    it("calculateDailyTotalDuration", function () {
+    const allSessions = [session1, session2, session3, session4, session5];
+    it("getAllSessions", function () {
         assert.deepEqual(getAllSessions(dailyRecord), allSessions);
     });
+
+    //Use an appropriate array method to get all sessions for a given userid .  Hint:  use getAllSessions.  
+    it("getAllSessionsForUser", function () {
+        assert.deepEqual(getAllSessionsForUser(dailyRecord, 2), [session2, session3]);
+    });
+
+    //Use an appropriate array method to get array of just duration times [60, 45, 30, 15 ,75] Hint:  use getAllSessions.  
+    it("getAllDurations", function () {
+        assert.deepEqual(getAllDurations(dailyRecord), [60, 45, 30, 15, 75]);
+    });
+
 
 });
