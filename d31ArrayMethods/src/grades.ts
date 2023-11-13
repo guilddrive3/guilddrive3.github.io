@@ -1,4 +1,15 @@
+/*
+This file contains  code for a quiz object. The quiz object has a key property that contains Answer objects that
+each have a property for the correct answer and another for an identifier of the question.  The way to calculate scores 
+for this data structure is to order the answers for a given student according to the qid property and do the same 
+for the key.  Then compare the two lists of answers (parallel arrays) and add up the number of matches.  
 
+You need to implement the three methods.
+
+This is a good example of using a comparator function to sort an array of objects and working with a data structure of nesed
+arrays and objects.
+
+*/
 
 type Student = { sid: number, answers: Answer[] };
 type Answer = { qid: number, ans: string };
