@@ -2,7 +2,7 @@
 import { assert } from "chai";
 
 import { firstLast, replaceEnds, higho, square, absVal, } from "../src/exam.js";
-import { calculateDailyTotalDuration, getAllSessions, getAllSessionsForUser, getAllDurations } from "../src/exam.js";
+import { calculateDailyTotalDuration, calculateTotalDuration, getAllSessions, getAllSessionsForUser, getAllDurations } from "../src/exam.js";
 
 
 describe("exam2 coding", function () {
@@ -20,7 +20,7 @@ describe("exam2 coding", function () {
         //first two number arguments replace the first and second elements of the array, last two number arguments replace the 
         //last two elements of the array
         const arr = [5, 4, 3, 2, 1, 0];
-        const result = [6, 1, 3, 2, 4]
+        const result = [6, 1, 3, 2, 2, 4]
         assert.deepEqual(replaceEnds(arr, 6, 1, 2, 4), result);
         assert.deepEqual(arr, [5, 4, 3, 2, 1, 0]); //original array is unchanged
     });
@@ -75,7 +75,7 @@ describe("fitness tracking", function () {
     // Develop a function, calculateTotalDuration, using a for..of loop, to find the total workout duration across all 
     //days in the dailyRecord array. Utilize the previously defined calculateDailyTotalDuration function. 
     it("calculateTotalDuration", function () {
-        assert.deepEqual(calculateDailyTotalDuration(day2.sessions), 225);
+        assert.deepEqual(calculateTotalDuration(dailyRecord), 225);
     });
 
     //Write a function getAllSessions that will use the concat method to return an array with all  the sessions in the dailyRecord.
