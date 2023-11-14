@@ -2,7 +2,8 @@
 import { assert } from "chai";
 
 import { topSalary } from "../src/destructure.js";
-import {classrooms, countStudentsInClassroom, findClassroomsWithCapacity, findStudentsOlderThan, averageStudentAge} from '../src/classrooms.js';
+import {classrooms, collectRoomNumbers, collectRoomsAndCapacities , collectLabeledRoomCaps ,
+    countStudentsInClassroom, findClassroomsWithCapacity, findStudentsOlderThan, averageStudentAge} from '../src/classrooms.js';
 
  
     
@@ -42,6 +43,15 @@ describe("topSalary", function() {
 
 
 describe("classroom embedded objects", function() {
+  it("collectRoomNumbers ", function() {
+    assert.deepEqual( collectRoomNumbers(), [101, 102, 103]);
+  });
+  it("collectRoomsAndCapacities", function() {
+    assert.deepEqual( collectRoomsAndCapacities(), ["101::30", "102::25", "103::35"]);
+  });
+  it("collectLabeledRoomCaps", function() {
+    assert.deepEqual( collectLabeledRoomCaps(), [{roomNumber: 101, capacity: 30}, {roomNumber: 102, capacity: 25}, {roomNumber: 103, capacity: 35}]);
+  });
   it("countStudentsInClassroom", function() {
     assert.equal( countStudentsInClassroom(classrooms, 103), 3);
     assert.equal( countStudentsInClassroom(classrooms, 102), 2);
