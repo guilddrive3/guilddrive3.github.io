@@ -21,36 +21,7 @@ type Cart = {
 }
 
 export function createShoppingCart():  Cart {
-  const cart: Item[] = [];
+ //IMPLEMENT THIS FUNCTION
 
-  function addItem(item: string, price: number): void {
-    cart.push({ item, price });
-    console.log(`Added ${item} to the cart.`);
-  }
 
-  function removeItem(item: string): void {
-    const index = cart.findIndex((cartItem) => cartItem.item === item);
-    if (index !== -1) {
-      cart.splice(index, 1);
-      console.log(`Removed ${item} from the cart.`);
-    } else {
-      console.log(`${item} not found in the cart.`);
-    }
-  }
-
-  function getTotal(): number {
-    let total = 0;
-    total = cart.reduce((acc, cartItem) => acc + cartItem.price, 0);
-    console.log(`Total cost: $${total}`);
-    return total;
-  }
-
-  return {
-    addItem,
-    removeItem,
-    getTotal,
-  };
 }
-
-
-
