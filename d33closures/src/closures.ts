@@ -6,11 +6,7 @@
  * @returns {Function} returns a function that tests whether its argument is in the arr
  * 
  */
-export function inArray(arr:  number[]): (arg: number) => boolean {
-  return function (arg: number): boolean {
-    return arr.includes(arg);
-  };
-}
+
 
 /**
  * 
@@ -19,12 +15,7 @@ export function inArray(arr:  number[]): (arg: number) => boolean {
  * @returns {Function} returns a function that tests whether its argument is inside the range
  * 
  */
-export function inBetween(low: number, high: number): (arg: number) => boolean {
-  return function (arg: number): boolean {
-    return arg >= low && arg <= high;
-  };
 
-}
 
 
 
@@ -32,23 +23,7 @@ export function inBetween(low: number, high: number): (arg: number) => boolean {
 /**
  * @returns {Function} closure that returns it's number
  */
-export function makeArmy() {
-    let shooters = [];
-    console.log("makeArmy called")
-    let i = 0;
-    while (i < 10) {
-      const k = i;
-      let shooter = function() { // create a shooter function,
-        console.log( k ); // that should show its number
-        return k;
-      };
-      shooters.push(shooter); // and add it to the array
-      i++;
-    }
-  
-    // ...and return the array of shooters
-    return shooters;
-  }
+
 
 
   
