@@ -4,5 +4,5 @@
   "compilerOptions": {
   "outDir": "./dist"
 },
-"include": ["*.ts", "./src/*.ts" , "./test/*.ts", "src/shoppingCart.ts123"],
+"include": ["*.ts", "./src/*.ts" , "./test/*.ts", "src/shoppingCart.ts"],
 }
