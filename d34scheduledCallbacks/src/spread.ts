@@ -9,7 +9,9 @@ You will need to use generic typing for copyArray and concat.   copyArray generi
 Do the same pattern for concat.
 */
 
-export function copyArray<T>(arr: Array<T>): Array<T> {
+export function copyArray<T>(arr: T[]): T[] {
     // COMPLETE THIS
 
 }
+
+
