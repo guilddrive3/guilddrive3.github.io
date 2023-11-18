@@ -1,0 +1,26 @@
+{
+    "type": "module",
+    "scripts": {
+        "app": "ts-node ./src/app.ts",
+        "test": "mocha",
+        "compile": "npx tsc",
+        "browser": "npx http-server . -p 8080 -o index.html"
+    },
+    "devDependencies": {
+        "@types/mocha": "^10.0.1",
+        "@types/node": "^20.5.0",
+        "@types/chai": "^4.3.5",
+        "chai": "^4.3.7",
+        "mocha": "^10.2.0",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.1.6"
+    },
+    "mocha": {
+        "extensions": ["ts"],
+        "spec": ["./test/*.ts"],
+        "node-option": [
+            "experimental-specifier-resolution=node",
+            "loader=ts-node/esm"
+        ]
+    }
+}
