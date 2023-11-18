@@ -1,5 +1,4 @@
 "use strict";
-
 /**
  * 
  * @returns {array} array of shooters
@@ -26,6 +25,6 @@ function makeArmy() {
 let army = makeArmy();
 
 // all shooters show 10 instead of their numbers 0, 1, 2, 3...
-army[0](); // 10 from the shooter number 0
-army[1](); // 10 from the shooter number 1
-army[2](); // 10 ...and so on.
+console.log(army[0]()); // 10 from the shooter number 0
+console.log(army[1]()); // 10 from the shooter number 1
+console.log(army[2]()); // 10 ...and so on.
